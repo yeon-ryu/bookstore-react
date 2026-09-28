@@ -8,12 +8,18 @@
       "description" : "책 줄거리",
       "price" : 13500,
       "image" : "https://image.yes24.com/goods/118499360/XL"
+    },
+    {
+      "id": "9788949105544",
+      "name" : "올빼미 기사2",
+      "category" : "그림책",
+      "writer" : "Knight Owl",
+      "description" : "책 줄거리 2",
+      "price" : 13500,
+      "image" : "https://image.yes24.com/goods/118499360/XL"
     }
   ],
-  "cart" : [
-  
-  ],
-  "checkout" : [
+  "purchase" : [
   
   ]
 }
