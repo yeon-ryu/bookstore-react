@@ -300,67 +300,44 @@
   ],
   "purchase": [
     {
-      "bookId": "9788952756419",
+      "bookId": "9788957078245",
       "count": 1,
-      "price": 15000,
-      "name": "잠이 오지 않는 밤",
-      "writer": "오유나",
+      "price": 12500,
+      "purchaseDate": "2026-09-29T23:58:29.730Z",
+      "name": "달님과 숨바꼭질",
+      "writer": "최유진",
       "category": "그림책",
-      "id": "nM0U66W_W3s"
-    },
-    {
-      "bookId": "xJJ6xJfjTeQ",
-      "count": 1,
-      "price": "3144",
-      "name": "숲속의 작은 집",
-      "writer": "이수민",
-      "category": "외국도서",
-      "id": "xkORhLOoE6k"
+      "id": "lGxe7MHCzQA"
     },
     {
       "bookId": "9788949105543",
-      "count": "2",
+      "count": 1,
       "price": 13500,
+      "purchaseDate": "2026-09-29T23:58:29.731Z",
       "name": "올빼미 기사",
       "writer": "Knight Owl",
       "category": "그림책",
-      "id": "kjYyjRFPbGY"
+      "id": "LcYA3R0Tad4"
     },
     {
-      "bookId": "9788957074318",
-      "count": 1,
-      "price": 12500,
-      "name": "꼬마 여우의 모험",
-      "writer": "정다온",
-      "category": "그림책",
-      "id": "OCxo_IjbJw4"
-    },
-    {
-      "bookId": "9788949112451",
-      "count": 1,
-      "price": 13500,
-      "name": "숲의 노래",
-      "writer": "강도윤",
-      "category": "그림책",
-      "id": "BG8r1nYf69c"
+      "bookId": "ixetqy6NfUo",
+      "count": 3,
+      "price": "1729",
+      "purchaseDate": "2026-09-29T23:58:29.731Z",
+      "name": "돼지책",
+      "writer": "이수민",
+      "category": "국내도서",
+      "id": "P7GTHMNr1HE"
     },
     {
       "bookId": "xJJ6xJfjTeQ",
-      "count": 1,
+      "count": 2,
       "price": "3144",
+      "purchaseDate": "2026-09-29T23:58:29.732Z",
       "name": "숲속의 작은 집",
       "writer": "이수민",
       "category": "외국도서",
-      "id": "kDUvZ_y_AJY"
-    },
-    {
-      "bookId": "9788949112451",
-      "count": 4,
-      "price": 13500,
-      "name": "숲의 노래",
-      "writer": "강도윤",
-      "category": "그림책",
-      "id": "yZryOkHIc8E"
+      "id": "0j0iRNVquNU"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
