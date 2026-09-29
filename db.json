@@ -2,37 +2,29 @@
   "books": [
     {
       "id": "9788949105543",
-      "name" : "올빼미 기사",
-      "category" : "그림책",
-      "writer" : "Knight Owl",
-      "description" : "책 줄거리",
-      "price" : 13500,
-      "image" : "https://image.yes24.com/goods/118499360/XL"
+      "name": "올빼미 기사",
+      "category": "그림책",
+      "writer": "Knight Owl",
+      "description": "책 줄거리",
+      "price": 13500,
+      "image": "https://image.yes24.com/goods/118499360/XL"
     },
     {
       "id": "9788949105544",
-      "name" : "올빼미 기사2",
-      "category" : "그림책",
-      "writer" : "Knight Owl",
-      "description" : "책 줄거리 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
-      "price" : 13500,
-      "image" : "https://image.yes24.com/goods/118499360/XL"
-    }, {
+      "name": "올빼미 기사2",
+      "category": "그림책",
+      "writer": "Knight Owl",
+      "description": "책 줄거리 aaaaaaaaa",
+      "price": 13500,
+      "image": "https://image.yes24.com/goods/118499360/XL"
+    },
+    {
       "id": "9788936434120",
       "name": "달빛 우체국",
       "category": "그림책",
       "writer": "김하늘",
       "description": "달빛이 비추는 밤마다 편지를 배달하는 작은 우체국의 따뜻한 이야기",
       "price": 14000,
-      "image": "https://image.yes24.com/goods/118499360/XL"
-    },
-    {
-      "id": "9788952789214",
-      "name": "숲속의 작은 집",
-      "category": "그림책",
-      "writer": "이수민",
-      "description": "숲속 작은 집에서 살아가는 동물 친구들의 특별한 하루를 담은 이야기",
-      "price": 15000,
       "image": "https://image.yes24.com/goods/118499360/XL"
     },
     {
@@ -286,9 +278,26 @@
       "description": "마을 한가운데 서 있는 오래된 나무에 숨겨진 특별한 비밀을 찾아가는 이야기",
       "price": 15500,
       "image": "https://image.yes24.com/goods/118499360/XL"
+    },
+    {
+      "category": "국내도서",
+      "name": "돼지책",
+      "writer": "이수민",
+      "price": "1729",
+      "description": "sssssss",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRa9UD_xP4xV4B3KZmhNGwBs23S48a7vJI-lCERMAW8Pg&s=10",
+      "id": "ixetqy6NfUo"
+    },
+    {
+      "name": "숲속의 작은 집",
+      "writer": "이수민",
+      "price": "3144",
+      "description": "테스",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtLCKWFliPyXSuBLkrbXlhu_zLvAFvUyj8U9hfgAXflQ&s=10",
+      "id": "xJJ6xJfjTeQ",
+      "category": "외국도서"
     }
   ],
-  "purchase" : [
-  
-  ]
+  "purchase": [],
+  "$schema": "./node_modules/json-server/schema.json"
 }

@@ -75,16 +75,16 @@ export default function Home() {
       <div className="side-bar">
         <div>카테고리</div>
         <input type="radio" id="category-all" name="category" value="" checked={filterValue.category === ""}
-          onChange={e => changeFilterValue(e)} className="category-input" />
+          onChange={e => {changeFilterValue(e); setRefresh(true);}} className="category-input" />
         <label htmlFor="category-all">전체</label><br/>
         <input type="radio" id="category-local" name="category" value="국내도서" checked={filterValue.category === "국내도서"}
-          onChange={e => changeFilterValue(e)} className="category-input" />
+          onChange={e => {changeFilterValue(e); setRefresh(true);}} className="category-input" />
         <label htmlFor="category-local">국내도서</label><br/>
         <input type="radio" id="category-foreign" name="category" value="외국도서" checked={filterValue.category === "외국도서"}
-          onChange={e => changeFilterValue(e)} className="category-input" />
+          onChange={e => {changeFilterValue(e); setRefresh(true);}} className="category-input" />
         <label htmlFor="category-foreign">외국도서</label><br/>
         <input type="radio" id="category-pricture" name="category" value="그림책" checked={filterValue.category === "그림책"}
-          onChange={e => changeFilterValue(e)} className="category-input" />
+          onChange={e => {changeFilterValue(e); setRefresh(true);}} className="category-input" />
         <label htmlFor="category-pricture">그림책</label><br/>
       </div>
 
