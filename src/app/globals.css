@@ -77,3 +77,48 @@ a {
 .loading {
   background-color: aquamarine;
 }
+
+.book-card img{
+  height: 100px;
+  width : 80px;
+}
+
+.paging-btn {
+  width : 30px;
+  height : 30px;
+  background-color: lightgray;
+  border-radius: 5px; margin: 10px;
+  text-align: center;
+}
+
+.page-container {
+  display: flex;
+}
+
+.list-container {
+  min-width : 300px;
+}
+
+.side-bar {
+  width : 100px;
+}
+
+.category-input {
+  display: none;
+}
+
+.category-input:checked + label {
+  font-weight: bold;
+}
+
+.book-card {
+  display: flex;
+}
+
+.book-card .book-content {
+  padding : 5px;
+}
+
+.right-content {
+  margin-left: auto;
+}

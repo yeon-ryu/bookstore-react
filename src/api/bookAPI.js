@@ -1,19 +1,19 @@
 const BASE_URL = "http://localhost:4000/books";
 
 export const bookApi = {
-    getBookList : async(page = 1, limit = 20, category = '', name = '', writer = '') => {
+    getBookList : async(page = 1, perPage = 20, category = '', name = '', writer = '') => {
         const url = new URL(BASE_URL);
         url.searchParams.append('_page', page);
-        url.searchParams.append('_limit', limit);
+        url.searchParams.append('_per_page', perPage);
 
-        if(category.trim().length > 0) {
+        if(category && category.trim().length > 0) {
             url.searchParams.append('category', category);
         }
-        if(name.trim().length > 0) {
-            url.searchParams.append('name', name);
+        if(name && name.trim().length > 0) {
+            url.searchParams.append('name:contains', name);
         }
-        if(writer.trim().length > 0) {
-            url.searchParams.append('writer', writer);
+        if(writer && writer.trim().length > 0) {
+            url.searchParams.append('writer:contains', writer);
         }
 
         const res = await fetch(url);
