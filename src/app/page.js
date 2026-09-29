@@ -4,6 +4,7 @@ import { bookApi } from "@/api/bookAPI";
 import Error from "@/components/Error";
 import Loading from "@/components/Loading";
 import Paging from "@/components/Paging";
+import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 
@@ -21,6 +22,9 @@ export default function Home() {
     name : "",
     writer : ""
   });
+
+  // 중복 검색을 피하기 위한 스위치
+  const [refresh, setRefresh] = useState(false);
 
   const getBookList = async() => {
     setError(null);
@@ -42,16 +46,25 @@ export default function Home() {
   }
 
   useEffect(() => {
-    if(searchParam.get('_page')) setPaging(prev => ({...prev, page : searchParam.get('_page')}));
-    if(searchParam.get('_per_page')) setPaging(prev => ({...prev, perPage : searchParam.get('_per_page')}));
+    if(searchParam.get('page')) setPaging(prev => ({...prev, page : searchParam.get('page')}));
+    if(searchParam.get('perPage')) setPaging(prev => ({...prev, perPage : searchParam.get('perPage')}));
     if(searchParam.get('category')) setFilterValue(prev => ({...prev, category : searchParam.get('category')}));
-    if(searchParam.get('name')) setFilterValue(prev => ({...prev, category : searchParam.get('name')}));
-    if(searchParam.get('writer')) setFilterValue(prev => ({...prev, category : searchParam.get('writer')}));
+    if(searchParam.get('name')) setFilterValue(prev => ({...prev, name : searchParam.get('name')}));
+    if(searchParam.get('writer')) setFilterValue(prev => ({...prev, writer : searchParam.get('writer')}));
+
+    setRefresh(true);
   }, [searchParam]);
 
   useEffect(() => {
-    getBookList();
+    setRefresh(true);
   }, [paging]);
+
+  useEffect(() => {
+    if(refresh) {
+      getBookList();
+      setRefresh(false);
+    }
+  }, [refresh])
 
   if(loading) return <Loading />
   if(error) return <Error error={error} />
@@ -79,10 +92,10 @@ export default function Home() {
         <div>
           <input className="search-input" type="text" name="name" value={filterValue.name} onChange={e => changeFilterValue(e)} placeholder="책 제목 검색" />
           <input className="search-input" type="text" name="writer" value={filterValue.writer} onChange={e => changeFilterValue(e)} placeholder="작가명 검색" />
-          <button onClick={() => {setPaging({page : 1, perPage : 20}); getBookList();}}>검색</button>
+          <button onClick={() => {setPaging({page : 1, perPage : 20}); setRefresh(true);}}>검색</button>
         </div>
 
-        {bookList.map(book => (<div className="book-card" key={book.id}>
+        {bookList.map(book => (<Link href={`/book/${book.id}`} className="book-card" key={book.id}>
           <img src={book.image} alt={book.name} />
           <div className="book-content">
             <strong>{book.name}</strong><br/>
@@ -92,7 +105,7 @@ export default function Home() {
           <div className="right-content">
             {book.price?.toLocaleString()}원
           </div>
-        </div>))}
+        </Link>))}
 
         <Paging click={(movePage, itemsPerPage) => setPaging({page : movePage, perPage : itemsPerPage})}
           page={paging.page} perPage={paging.perPage} maxCount={itemMaxCount} useNumber={true} />

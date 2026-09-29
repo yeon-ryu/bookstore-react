@@ -53,18 +53,20 @@ a {
   height: 100px;
   background-color: antiquewhite;
   overflow: hidden;
+  display: flex;
 }
 
 .title {
   width: 300px;
   overflow: hidden;
   margin: 10px;
+  width : auto;
+  height: 100%;
 }
 
 .header .icon-btn {
   height: 50px;
   width: 50px;
-  float: right;
   margin : 10px;
   overflow: hidden;
 }
@@ -101,6 +103,9 @@ a {
 
 .side-bar {
   width : 100px;
+  padding : 0px 5px;
+  margin : 5px;
+  border : 1px solid gray;
 }
 
 .category-input {
@@ -113,12 +118,26 @@ a {
 
 .book-card {
   display: flex;
+  border : 1px solid gray;
+  padding : 5px;
+  margin : 5px 0px;
 }
 
 .book-card .book-content {
-  padding : 5px;
+  padding : 0px 5px;
 }
 
 .right-content {
   margin-left: auto;
+  display: flex;
+}
+
+.img-container {
+  height: 400px;
+  text-align: center;
+}
+
+.img-container img {
+  width: auto;
+  height: 100%;
 }
