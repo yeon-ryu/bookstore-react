@@ -47,3 +47,33 @@ a {
     color-scheme: dark;
   }
 }
+
+/* 커스텀 css */
+.header {
+  height: 100px;
+  background-color: antiquewhite;
+  overflow: hidden;
+}
+
+.title {
+  width: 300px;
+  overflow: hidden;
+  margin: 10px;
+}
+
+.header .icon-btn {
+  height: 50px;
+  width: 50px;
+  float: right;
+  margin : 10px;
+  overflow: hidden;
+}
+
+.error {
+  color: red;
+  background-color: burlywood;
+}
+
+.loading {
+  background-color: aquamarine;
+}
