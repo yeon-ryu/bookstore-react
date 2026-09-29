@@ -3,6 +3,7 @@
 import { bookApi } from "@/api/bookAPI";
 import Error from "@/components/Error";
 import Loading from "@/components/Loading";
+import { useCartStore } from "@/stores/useCartStore";
 import { useParams, useRouter } from "next/navigation"
 import { useEffect, useState } from "react";
 
@@ -14,7 +15,18 @@ export default function BookDetail() {
 
     const [book, setBook] = useState({});
 
+    const { addCart } = useCartStore();
+
     const router = useRouter();
+
+    const addBookToCart = () => {
+        try {
+            addCart(book);
+            alert("장바구니에 추가했습니다!");
+        } catch(e) {
+            alert(e.message);
+        }
+    }
 
     useEffect(() => {
         if(!params.bookId) {
@@ -46,6 +58,10 @@ export default function BookDetail() {
             <span onClick={() => router.push(`/?category=${book.category}`)}>{book.category}</span>
             <h3>{book.price?.toLocaleString()}원</h3>
             <div>{book.description}</div>
+        </div>
+        <div>
+            <button className="round-btn" onClick={addBookToCart}>장바구니 담기</button>
+            <button className="round-btn" onClick={() => router.push(`/manage?bookId=${book.id}`)}>도서 수정</button>
         </div>
     </>
 }

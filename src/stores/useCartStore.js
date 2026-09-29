@@ -3,11 +3,17 @@ import { persist } from "zustand/middleware";
 
 export const useCartStore = create(
     persist(
-        set => ({
+        (set, get) => ({
             cart : [],
             bookCount : 0,
 
-            addCart : (book) => set(state => ({cart : [...state.cart, {...book, bookId : book.id, count : 1}], bookCount : state.bookCount + 1})),
+            addCart : (book) => {
+                const existed = get().cart.find(b => b.bookId === book.id);
+                if(existed) {
+                    throw new Error('이미 장바구니에 있는 책입니다.');
+                }
+                set(state => ({cart : [...state.cart, {...book, bookId : book.id, count : 1}], bookCount : state.bookCount + 1}))
+            },
 
             updateCount : (id, cnt) => {
                 if(cnt <= 0) {
