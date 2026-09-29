@@ -7,15 +7,11 @@ export const purchaseApi = {
         return res.json();
     },
 
-    purchase : async(books) => {
+    purchase : async(book) => {
         const res = await fetch(BASE_URL, {
             method : "POST",
             headers : {"Content-Typle" : "application/json"},
-            body : JSON.stringify(
-                books.map(b => (
-                    {'bookId' : b.bookId, 'count' : b.count, 'price' : b.price, 'name' : b.name, 'writer' : b.writer, 'category' : b.category, 'img' : b.img }
-                ))
-            )
+            body : JSON.stringify({'bookId' : book.bookId, 'count' : book.count, 'price' : book.price, 'name' : book.name, 'writer' : book.writer, 'category' : book.category, 'img' : book.img })
         });
         if(!res.ok) throw new Error("결제하는 중 오류가 발생했습니다!");
 

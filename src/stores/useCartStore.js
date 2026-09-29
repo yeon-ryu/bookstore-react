@@ -24,9 +24,6 @@ export const useCartStore = create(
 
             deleteBook : (id) => set(state => ({cart : state.cart.filter(b => b.bookId !== id), bookCount : state.bookCount - 1})),
 
-            // purchase 시, 특정 책들만 결제한 후 삭제할 때 사용
-            deleteBooks : async(ids) => set(state => ({cart : state.cart.filter(b => !ids.includes(b.bookId)), bookCount : state.bookCount - ids.length})),
-
             resetCart : () => {
                 set({cart : [], bookCount : 0});
             }

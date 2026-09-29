@@ -298,6 +298,70 @@
       "category": "외국도서"
     }
   ],
-  "purchase": [],
+  "purchase": [
+    {
+      "bookId": "9788952756419",
+      "count": 1,
+      "price": 15000,
+      "name": "잠이 오지 않는 밤",
+      "writer": "오유나",
+      "category": "그림책",
+      "id": "nM0U66W_W3s"
+    },
+    {
+      "bookId": "xJJ6xJfjTeQ",
+      "count": 1,
+      "price": "3144",
+      "name": "숲속의 작은 집",
+      "writer": "이수민",
+      "category": "외국도서",
+      "id": "xkORhLOoE6k"
+    },
+    {
+      "bookId": "9788949105543",
+      "count": "2",
+      "price": 13500,
+      "name": "올빼미 기사",
+      "writer": "Knight Owl",
+      "category": "그림책",
+      "id": "kjYyjRFPbGY"
+    },
+    {
+      "bookId": "9788957074318",
+      "count": 1,
+      "price": 12500,
+      "name": "꼬마 여우의 모험",
+      "writer": "정다온",
+      "category": "그림책",
+      "id": "OCxo_IjbJw4"
+    },
+    {
+      "bookId": "9788949112451",
+      "count": 1,
+      "price": 13500,
+      "name": "숲의 노래",
+      "writer": "강도윤",
+      "category": "그림책",
+      "id": "BG8r1nYf69c"
+    },
+    {
+      "bookId": "xJJ6xJfjTeQ",
+      "count": 1,
+      "price": "3144",
+      "name": "숲속의 작은 집",
+      "writer": "이수민",
+      "category": "외국도서",
+      "id": "kDUvZ_y_AJY"
+    },
+    {
+      "bookId": "9788949112451",
+      "count": 4,
+      "price": 13500,
+      "name": "숲의 노래",
+      "writer": "강도윤",
+      "category": "그림책",
+      "id": "yZryOkHIc8E"
+    }
+  ],
   "$schema": "./node_modules/json-server/schema.json"
 }

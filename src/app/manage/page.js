@@ -37,7 +37,7 @@ export default function Manage() {
         }
 
         setLoading(true);
-        setError(false);
+        setError(null);
         try {
             if(bookId.current) { // 수정
                 const book = await bookApi.updateBook(bookId.current, formValue);

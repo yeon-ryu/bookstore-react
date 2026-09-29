@@ -34,7 +34,7 @@ export default function BookDetail() {
             return;
         }
         setLoading(true);
-        setError(false);
+        setError(null);
 
         bookApi.getBook(params.bookId).then(b => {
             setBook(b);
