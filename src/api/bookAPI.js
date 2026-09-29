@@ -44,7 +44,7 @@ export const bookApi = {
         const res = await fetch(`${BASE_URL}/${id}`, {
             method : "PUT",
             headers : {"Content-Typle" : "application/json"},
-            body : JSON.stringify(newBook)
+            body : JSON.stringify(bookData)
         });
         if(!res.ok) throw new Error("책을 수정하는 중 오류가 발생했습니다!");
 
