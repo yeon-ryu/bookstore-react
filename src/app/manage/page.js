@@ -134,8 +134,8 @@ export default function Manage() {
                     <img src={formValue.image} alt="이미지 미리보기" />
                 </div>
 
-                <button className="save round-btn" onClick={saveBook}>저장</button>
-                <button className="error round-btn" onClick={() => router.push("/")}>취소</button>
+                <button className="action-btn save" onClick={saveBook}>저장</button>
+                <button className="action-btn error" onClick={() => router.push("/")}>취소</button>
             </fieldset>
         </div>
     </>

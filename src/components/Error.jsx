@@ -1,4 +1,4 @@
-import "./StateView.css";
+import "@/css/StateView.css";
 
 export default function Error({ error }) {
 

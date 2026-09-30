@@ -1,0 +1,125 @@
+/* ===== 페이지 레이아웃 ===== */
+
+.page-container {
+  display: flex;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  min-height: calc(100vh - 64px); /* 헤더 높이(64px)만큼 제외 */
+}
+
+/* 사이드바 옆의 본문 영역이 남는 공간을 차지하도록 */
+.page-container > :not(.side-bar) {
+  flex: 1;
+  min-width: 0;
+}
+
+/* ===== 사이드바 ===== */
+.side-bar {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex-shrink: 0;
+  width: 150px;
+  padding: 16px 12px;
+  box-sizing: border-box;
+  border-right: 1px solid #e5e7eb;
+  background: #f9fafb;
+  font-family: -apple-system, BlinkMacSystemFont, "Pretendard", "Noto Sans KR",
+    "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+}
+
+/* 기본 radio 버튼은 화면에서만 숨기고 키보드/스크린리더 접근은 유지 */
+.side-bar input[type="radio"] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* 한 줄(라벨) */
+.side-bar input[type="radio"] + label {
+  display: flex;
+  align-items: center;
+  padding: 10px 12px;
+  border-radius: 8px;
+  color: #374151;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.4;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.side-bar input[type="radio"] + label:hover {
+  background: #eef0f3;
+}
+
+/* 선택된 항목 */
+.side-bar input[type="radio"]:checked + label {
+  background: color-mix(in srgb, var(--color-primary) 10%, white);
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+/* 키보드 포커스 */
+.side-bar input[type="radio"]:focus-visible + label {
+  outline: 3px solid color-mix(in srgb, var(--color-primary) 40%, transparent);
+  outline-offset: 1px;
+}
+
+/* 비활성화 항목 */
+.side-bar input[type="radio"]:disabled + label {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* ===== 사이드바 제목 (라디오 그룹 설명) ===== */
+.side-bar-title {
+  margin: 0 0 4px;
+  padding: 4px 12px;
+  color: #6b7280;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  line-height: 1.4;
+}
+ 
+/* 제목이 여러 개일 때 그룹 사이 간격 */
+.side-bar-title:not(:first-child) {
+  margin-top: 16px;
+}
+
+/* ===== 모션 최소화 ===== */
+@media (prefers-reduced-motion: reduce) {
+  .side-bar input[type="radio"] + label {
+    transition: none;
+  }
+}
+
+/* ===== 모바일: 사이드바를 위쪽 가로 메뉴로 ===== */
+@media (max-width: 768px) {
+  .page-container {
+    flex-direction: column;
+    min-height: calc(100vh - 56px);
+  }
+
+  .side-bar {
+    flex-direction: row;
+    gap: 6px;
+    width: 100%;
+    padding: 10px 12px;
+    overflow-x: auto;
+    border-right: none;
+    border-bottom: 1px solid #e5e7eb;
+  }
+
+  .side-bar input[type="radio"] + label {
+    flex-shrink: 0;
+    white-space: nowrap;
+  }
+}

@@ -1,6 +1,6 @@
 'use client'
 
-import "./Header.css";
+import "@/css/Header.css";
 import { useCartStore } from "@/stores/useCartStore"
 import Link from "next/link"
 

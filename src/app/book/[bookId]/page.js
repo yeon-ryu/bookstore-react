@@ -60,8 +60,8 @@ export default function BookDetail() {
             <div>{book.description}</div>
         </div>
         <div>
-            <button className="round-btn" onClick={addBookToCart}>장바구니 담기</button>
-            <button className="round-btn" onClick={() => router.push(`/manage?bookId=${book.id}`)}>도서 수정</button>
+            <button className="action-btn save" onClick={addBookToCart}>장바구니 담기</button>
+            <button className="action-btn warning" onClick={() => router.push(`/manage?bookId=${book.id}`)}>도서 수정</button>
         </div>
     </>
 }

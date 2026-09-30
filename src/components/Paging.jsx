@@ -1,4 +1,4 @@
-import "./Paging.css";
+import "@/css/Paging.css";
 
 /**
  * click(이동할 페이지, 페이지당 출력 수)

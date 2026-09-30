@@ -74,7 +74,7 @@ export default function Home() {
   return (
     <div className="page-container">
       <div className="side-bar">
-        <div>카테고리</div>
+        <p className="side-bar-title">카테고리</p>
         <input type="radio" id="category-all" name="category" value="" checked={filterValue.category === ""}
           onChange={e => {changeFilterValue(e); setRefresh(true);}} className="category-input" />
         <label htmlFor="category-all">전체</label><br/>
@@ -90,10 +90,15 @@ export default function Home() {
       </div>
 
       <div className="list-container">
-        <div>
+        <div className="search-box">
           <input className="search-input" type="text" name="name" value={filterValue.name} onChange={e => changeFilterValue(e)} placeholder="책 제목 검색" />
           <input className="search-input" type="text" name="writer" value={filterValue.writer} onChange={e => changeFilterValue(e)} placeholder="작가명 검색" />
-          <button onClick={() => {setPaging({page : 1, perPage : 20}); setRefresh(true);}}>검색</button>
+          <button className="action-btn info" onClick={() => {setPaging({page : 1, perPage : 20}); setRefresh(true);}}>검색</button>
+          <select className="search-select" name="perPage" id="" value={paging.perPage} onChange={e => setPaging({...paging, perPage : e.target.value})} required>
+              <option value="20">20개씩 보기</option>
+              <option value="30">30개씩 보기</option>
+              <option value="40">40개씩 보기</option>
+          </select>
         </div>
 
         {(!bookList || bookList.length === 0) && <Empty />}
@@ -101,9 +106,9 @@ export default function Home() {
         {bookList.map(book => (<Link href={`/book/${book.id}`} className="book-card" key={book.id}>
           <img src={book.image} alt={book.name} />
           <div className="book-content">
-            <strong>{book.name}</strong><br/>
-            <p>{book.writer} {book.category}</p><br/>
-            <p>{book.description}</p>
+            <strong className="book-title">{book.name}</strong><br/>
+            <p className="book-meta"><span>{book.writer}</span><span>{book.category}</span></p><br/>
+            <p className="book-desc">{book.description}</p>
           </div>
           <div className="right-content">
             {book.price?.toLocaleString()}원

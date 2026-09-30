@@ -14,7 +14,7 @@
       "name": "올빼미 기사2",
       "category": "그림책",
       "writer": "Knight Owl",
-      "description": "책 줄거리 aaaaaaaaa",
+      "description": "책 줄거리 aaaaaaaaaㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇ",
       "price": 13500,
       "image": "https://image.yes24.com/goods/118499360/XL"
     },
@@ -342,6 +342,28 @@
       "category": "국내도서",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRa9UD_xP4xV4B3KZmhNGwBs23S48a7vJI-lCERMAW8Pg&s=10",
       "id": "D_ZOOcmDE9w"
+    },
+    {
+      "bookId": "9788952759345",
+      "count": 1,
+      "price": 15500,
+      "purchaseDate": "2026-09-30T03:54:31.038Z",
+      "name": "숲속 도서관",
+      "writer": "신예원",
+      "category": "그림책",
+      "image": "https://image.yes24.com/goods/118499360/XL",
+      "id": "80bUvKvKHCc"
+    },
+    {
+      "bookId": "9788936434120",
+      "count": 1,
+      "price": 14000,
+      "purchaseDate": "2026-09-30T03:54:31.039Z",
+      "name": "달빛 우체국",
+      "writer": "김하늘",
+      "category": "그림책",
+      "image": "https://image.yes24.com/goods/118499360/XL",
+      "id": "lxFVvlYI_Ag"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

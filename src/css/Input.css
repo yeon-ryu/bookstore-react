@@ -1,0 +1,173 @@
+/* (선택) 입력창과 버튼을 나란히 묶는 래퍼 */
+.search-box {
+  --sb-text: #1f2933;
+  --sb-muted: #9ca3af;
+  --sb-border: #d1d5db;
+  --sb-accent: #2f5bea;
+  --sb-accent-hover: #2447c4;
+
+  --color-primary : #2f5bea;
+ 
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  min-width: 200px;
+  max-width: 850px;
+  font-family: -apple-system, BlinkMacSystemFont, "Pretendard", "Noto Sans KR",
+    "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  margin : 10px 0px;
+}
+ 
+/* ===== 입력창 ===== */
+.search-input {
+  flex: 1;
+  min-width: 0;
+  height: 40px;
+  padding: 0 14px;
+  margin-right : 5px;
+  box-sizing: border-box;
+  border: 1px solid var(--sb-border, #d1d5db);
+  border-radius: 8px;
+  background: #fff;
+  color: var(--sb-text, #1f2933);
+  font-size: 14px;
+  font-family: inherit;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+ 
+.search-input::placeholder {
+  color: var(--sb-muted, #9ca3af);
+}
+ 
+.search-input:hover {
+  border-color: #9ca3af;
+}
+ 
+.search-input:focus {
+  outline: none;
+  border-color: var(--sb-accent, #2f5bea);
+  box-shadow: 0 0 0 3px rgba(47, 91, 234, 0.2);
+}
+ 
+.search-input:disabled {
+  background: #f3f4f6;
+  color: var(--sb-muted, #9ca3af);
+  cursor: not-allowed;
+}
+
+/* ===== 셀렉트 박스 (search-input, search-btn과 같은 톤) ===== */
+ 
+.search-select {
+  flex-shrink: 0;
+  height: 40px;
+  padding: 0 36px 0 14px; /* 오른쪽은 화살표 자리 */
+  box-sizing: border-box;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background-color: #fff;
+  /* 브라우저 기본 화살표를 없애고 직접 그린 화살표 사용 */
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  color: #1f2933;
+  font-size: 14px;
+  font-family: inherit;
+  cursor: pointer;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+ 
+.search-select:hover:not(:disabled) {
+  border-color: #9ca3af;
+}
+ 
+.search-select:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px
+    color-mix(in srgb, var(--color-primary) 20%, transparent);
+}
+ 
+.search-select:disabled {
+  background-color: #f3f4f6;
+  color: #9ca3af;
+  cursor: not-allowed;
+}
+ 
+/* 선택 전(빈 값) 상태를 placeholder처럼 연하게 보이게 하고 싶을 때:
+   <select required> + 첫 option에 value="" 를 주면 적용됨 */
+.search-select:required:invalid {
+  color: #9ca3af;
+}
+ 
+.search-select option {
+  color: #1f2933;
+}
+ 
+@media (prefers-reduced-motion: reduce) {
+  .search-select {
+    transition: none;
+  }
+}
+ 
+@media (max-width: 480px) {
+  .search-select {
+    padding-left: 10px;
+  }
+}
+ 
+/* ===== 버튼 ===== */
+.action-btn {
+  flex-shrink: 0;
+  height: 40px;
+  padding: 0 20px;
+  margin-right : 5px;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: inherit;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+ 
+.action-btn:hover:not(:disabled) {
+  background: color-mix(in srgb, var(--color-primary) 85%, black);
+}
+ 
+.action-btn:active:not(:disabled) {
+  transform: translateY(1px);
+}
+ 
+.action-btn:focus-visible {
+  outline: 3px solid rgba(47, 91, 234, 0.4);
+  outline-offset: 2px;
+}
+ 
+.action-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+ 
+/* ===== 모션 최소화 ===== */
+@media (prefers-reduced-motion: reduce) {
+  .search-input,
+  .action-btn {
+    transition: none;
+  }
+}
+ 
+/* ===== 모바일 ===== */
+@media (max-width: 480px) {
+  .action-btn {
+    max-width: 100%;
+  }
+ 
+  .search-btn {
+    padding: 0 16px;
+  }
+}

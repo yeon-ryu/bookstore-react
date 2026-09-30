@@ -49,84 +49,28 @@ a {
 }
 
 /* 커스텀 css */
-.header {
-  height: 100px;
-  background-color: antiquewhite;
-  overflow: hidden;
-  display: flex;
-}
-
-.title {
-  width: 300px;
-  overflow: hidden;
-  margin: 10px;
-  width : auto;
-  height: 100%;
-}
-
-.header .icon-btn {
-  height: 50px;
-  width: 50px;
-  margin : 10px;
-  overflow: hidden;
-}
-
 .error {
   background-color: red;
   color: white;
+  --color-primary : red;
+}
+
+.warning {
+  background-color: orange;
+  color : white;
+  --color-primary : orange;
 }
 
 .save {
-  background-color: darkseagreen;
+  background-color: forestgreen;
   color: white;
+  --color-primary : forestgreen;
 }
 
-.loading {
-  background-color: aquamarine;
-}
-
-.book-card img{
-  height: 100px;
-  width : 80px;
-}
-
-.page-container {
-  display: flex;
-}
-
-.list-container {
-  min-width : 300px;
-}
-
-.side-bar {
-  width : 100px;
-  padding : 0px 5px;
-  margin : 5px;
-  border : 1px solid gray;
-}
-
-.category-input {
-  display: none;
-}
-
-.category-input:checked + label {
-  font-weight: bold;
-}
-
-.book-card {
-  display: flex;
-  border : 1px solid gray;
-  padding : 5px;
-  margin : 5px 0px;
-}
-
-.book-card .book-content {
-  padding : 0px 5px;
-}
-
-.right-content {
-  margin-left: auto;
-  display: flex;
+.info {
+  background-color: #2f5bea;
+  color: white;
+  --color-primary : #2f5bea;
 }
 
 .img-container {
