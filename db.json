@@ -300,147 +300,52 @@
   ],
   "purchase": [
     {
-      "bookId": "xJJ6xJfjTeQ",
-      "count": 1,
-      "price": "3144",
-      "purchaseDate": "2026-09-30T00:48:05.322Z",
-      "name": "숲속의 작은 집",
-      "writer": "이수민",
-      "category": "외국도서",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtLCKWFliPyXSuBLkrbXlhu_zLvAFvUyj8U9hfgAXflQ&s=10",
-      "id": "wAPOF9xRnVg"
-    },
-    {
       "bookId": "9788949105544",
       "count": 1,
       "price": 13500,
-      "purchaseDate": "2026-09-30T00:48:05.322Z",
+      "purchaseDate": "2026-09-30T07:14:31.237Z",
+      "purchaseId": "17907524712372c",
       "name": "올빼미 기사2",
       "writer": "Knight Owl",
       "category": "그림책",
       "image": "https://image.yes24.com/goods/118499360/XL",
-      "id": "7lN5FM0B-Uo"
+      "id": "bTzJS8Wd75Y"
     },
     {
-      "bookId": "9788949105543",
+      "bookId": "ixetqy6NfUo",
+      "count": 2,
+      "price": "1729",
+      "purchaseDate": "2026-09-30T07:14:31.237Z",
+      "purchaseId": "17907524712372c",
+      "name": "돼지책",
+      "writer": "이수민",
+      "category": "국내도서",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRa9UD_xP4xV4B3KZmhNGwBs23S48a7vJI-lCERMAW8Pg&s=10",
+      "id": "RaMopDMzyBg"
+    },
+    {
+      "bookId": "9788936439279",
       "count": 3,
-      "price": 13500,
-      "purchaseDate": "2026-09-30T00:48:05.323Z",
-      "name": "올빼미 기사",
-      "writer": "Knight Owl",
-      "category": "그림책",
-      "image": "https://image.yes24.com/goods/118499360/XL",
-      "id": "LYf5YfrqSL0"
-    },
-    {
-      "bookId": "ixetqy6NfUo",
-      "count": 10,
-      "price": "1729",
-      "purchaseDate": "2026-09-30T00:48:05.324Z",
-      "name": "돼지책",
-      "writer": "이수민",
-      "category": "국내도서",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRa9UD_xP4xV4B3KZmhNGwBs23S48a7vJI-lCERMAW8Pg&s=10",
-      "id": "D_ZOOcmDE9w"
-    },
-    {
-      "bookId": "9788952759345",
-      "count": 1,
       "price": 15500,
-      "purchaseDate": "2026-09-30T03:54:31.038Z",
-      "name": "숲속 도서관",
-      "writer": "신예원",
+      "purchaseDate": "2026-09-30T07:14:54.101Z",
+      "purchaseId": "17907524941012f",
+      "name": "파란 고래의 꿈",
+      "writer": "이예린",
       "category": "그림책",
       "image": "https://image.yes24.com/goods/118499360/XL",
-      "id": "80bUvKvKHCc"
-    },
-    {
-      "bookId": "9788936434120",
-      "count": 1,
-      "price": 14000,
-      "purchaseDate": "2026-09-30T03:54:31.039Z",
-      "name": "달빛 우체국",
-      "writer": "김하늘",
-      "category": "그림책",
-      "image": "https://image.yes24.com/goods/118499360/XL",
-      "id": "lxFVvlYI_Ag"
-    },
-    {
-      "bookId": "9788949105543",
-      "count": 1,
-      "price": 13500,
-      "purchaseDate": "2026-09-30T05:40:17.101Z",
-      "name": "올빼미 기사",
-      "writer": "Knight Owl",
-      "category": "그림책",
-      "image": "https://image.yes24.com/goods/118499360/XL",
-      "id": "sj9PPs4tQ2s"
-    },
-    {
-      "bookId": "ixetqy6NfUo",
-      "count": 1,
-      "price": "1729",
-      "purchaseDate": "2026-09-30T06:53:45.545Z",
-      "name": "돼지책",
-      "writer": "이수민",
-      "category": "국내도서",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRa9UD_xP4xV4B3KZmhNGwBs23S48a7vJI-lCERMAW8Pg&s=10",
-      "id": "95nRcQJlIZ0"
+      "id": "V8JyPKg4M08"
     },
     {
       "bookId": "xJJ6xJfjTeQ",
-      "count": 2,
+      "count": 1,
       "price": "3144",
-      "purchaseDate": "2026-09-30T06:53:45.546Z",
+      "purchaseDate": "2026-09-30T07:14:54.101Z",
+      "purchaseId": "17907524941012f",
       "name": "숲속의 작은 집",
       "writer": "이수민",
       "category": "국내도서",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtLCKWFliPyXSuBLkrbXlhu_zLvAFvUyj8U9hfgAXflQ&s=10",
-      "id": "h1yMGKpIHpQ"
-    },
-    {
-      "bookId": "9788949105544",
-      "count": 1,
-      "price": 13500,
-      "purchaseDate": "2026-09-30T06:53:45.547Z",
-      "name": "올빼미 기사2",
-      "writer": "Knight Owl",
-      "category": "그림책",
-      "image": "https://image.yes24.com/goods/118499360/XL",
-      "id": "lZk2lPKpVCg"
-    },
-    {
-      "bookId": "ixetqy6NfUo",
-      "count": 1,
-      "price": "1729",
-      "purchaseDate": "2026-09-30T06:54:12.777Z",
-      "name": "돼지책",
-      "writer": "이수민",
-      "category": "국내도서",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRa9UD_xP4xV4B3KZmhNGwBs23S48a7vJI-lCERMAW8Pg&s=10",
-      "id": "zLBT2-GxyB4"
-    },
-    {
-      "bookId": "xJJ6xJfjTeQ",
-      "count": 2,
-      "price": "3144",
-      "purchaseDate": "2026-09-30T06:54:12.778Z",
-      "name": "숲속의 작은 집",
-      "writer": "이수민",
-      "category": "국내도서",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtLCKWFliPyXSuBLkrbXlhu_zLvAFvUyj8U9hfgAXflQ&s=10",
-      "id": "89eR1ac3vvk"
-    },
-    {
-      "bookId": "9788949105544",
-      "count": 1,
-      "price": 13500,
-      "purchaseDate": "2026-09-30T06:54:12.778Z",
-      "name": "올빼미 기사2",
-      "writer": "Knight Owl",
-      "category": "그림책",
-      "image": "https://image.yes24.com/goods/118499360/XL",
-      "id": "IPAIhSB_z0U"
+      "id": "5EgcPVtuUkk"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

@@ -11,7 +11,7 @@ export const purchaseApi = {
         const res = await fetch(BASE_URL, {
             method : "POST",
             headers : {"Content-Typle" : "application/json"},
-            body : JSON.stringify({'bookId' : book.bookId, 'count' : book.count, 'price' : book.price, 'purchaseDate' : book.purchaseDate
+            body : JSON.stringify({'bookId' : book.bookId, 'count' : book.count, 'price' : book.price, 'purchaseDate' : book.purchaseDate, 'purchaseId' : book.purchaseId
                 , 'name' : book.name, 'writer' : book.writer, 'category' : book.category, 'image' : book.image })
         });
         if(!res.ok) throw new Error(`결제하는 중 오류가 발생했습니다! (${res.statusText})`);

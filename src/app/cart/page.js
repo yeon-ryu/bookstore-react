@@ -21,7 +21,9 @@ export default function Cart() {
 
         try {
             const purchaseDate = new Date();
-            const purchase = cart.map(async(b) => purchaseApi.purchase({...b, count : Number(b.count), purchaseDate : purchaseDate}));
+            const purchaseId = purchaseDate.getTime() + Math.random().toString(16).slice(2, 4);
+            const purchase = cart.map(async(b) => purchaseApi.purchase({...b, count : Number(b.count)
+                , purchaseDate : purchaseDate, purchaseId : purchaseId}));
             const result = await Promise.all(purchase);
             resetCart();
             alert("결제가 성공했습니다!");
