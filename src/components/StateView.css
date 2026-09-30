@@ -1,0 +1,161 @@
+/* ===== 공용 상태 화면 (Error / Loading / Empty) 공통 스타일 ===== */
+
+.state-view {
+  --sv-text: #1f2933;
+  --sv-muted: #6b7280;
+  --sv-border: #e5e7eb;
+  --sv-accent: #2f5bea;
+  --sv-accent-hover: #2447c4;
+
+  --sv-error: #b42318;
+  --sv-error-bg: #fef3f2;
+  --sv-loading: #2f5bea;
+  --sv-loading-bg: #eef2ff;
+  --sv-empty: #6b7280;
+  --sv-empty-bg: #f3f4f6;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  min-height: 320px;
+  padding: 48px 24px;
+  box-sizing: border-box;
+  text-align: center;
+  color: var(--sv-text);
+  font-family: -apple-system, BlinkMacSystemFont, "Pretendard", "Noto Sans KR",
+    "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+}
+
+/* 아이콘 원형 배경 */
+.state-view__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  margin-bottom: 8px;
+  border-radius: 50%;
+}
+
+.state-view__icon svg {
+  width: 30px;
+  height: 30px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.state-view__title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.state-view__message {
+  margin: 0;
+  max-width: 44ch;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--sv-muted);
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+
+/* 버튼 */
+.state-view__button {
+  margin-top: 16px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  background: var(--sv-accent);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.state-view__button:hover {
+  background: var(--sv-accent-hover);
+}
+
+.state-view__button:focus-visible {
+  outline: 3px solid rgba(47, 91, 234, 0.4);
+  outline-offset: 2px;
+}
+
+.state-view__button--ghost {
+  background: transparent;
+  color: var(--sv-text);
+  border: 1px solid var(--sv-border);
+}
+
+.state-view__button--ghost:hover {
+  background: var(--sv-empty-bg);
+}
+
+/* ===== Error ===== */
+.state-view--error .state-view__icon {
+  background: var(--sv-error-bg);
+  color: var(--sv-error);
+}
+
+.state-view--error .state-view__message {
+  max-width: 44ch;
+  padding: 10px 14px;
+  border-radius: 8px;
+  background: var(--sv-error-bg);
+  color: var(--sv-error);
+  font-size: 13px;
+}
+
+/* ===== Loading ===== */
+.state-view--loading .state-view__icon {
+  background: var(--sv-loading-bg);
+}
+
+.state-view__spinner {
+  width: 30px;
+  height: 30px;
+  border: 3px solid rgba(47, 91, 234, 0.2);
+  border-top-color: var(--sv-loading);
+  border-radius: 50%;
+  animation: state-view-spin 0.8s linear infinite;
+}
+
+@keyframes state-view-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ===== Empty ===== */
+.state-view--empty .state-view__icon {
+  background: var(--sv-empty-bg);
+  color: var(--sv-empty);
+}
+
+/* ===== 모션 최소화 설정 존중 ===== */
+@media (prefers-reduced-motion: reduce) {
+  .state-view__spinner {
+    animation-duration: 2.4s;
+  }
+  .state-view__button {
+    transition: none;
+  }
+}
+
+/* ===== 모바일 ===== */
+@media (max-width: 480px) {
+  .state-view {
+    min-height: 260px;
+    padding: 32px 16px;
+  }
+}
