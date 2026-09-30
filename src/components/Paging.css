@@ -1,0 +1,115 @@
+/* ===== 페이징 ===== */
+ 
+.paging {
+  --pg-text: #374151;
+  --pg-border: #e5e7eb;
+  --pg-hover-bg: #f3f4f6;
+  --pg-accent: #2f5bea;
+ 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 24px 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Pretendard", "Noto Sans KR",
+    "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+}
+ 
+/* ===== 페이징 버튼 (숫자 / 아이콘 공통) ===== */
+.paging-btn {
+  min-width: 36px;
+  height: 36px;
+  padding: 0 10px;
+  box-sizing: border-box;
+  border: 1px solid var(--pg-border);
+  border-radius: 8px;
+  background: #fff;
+  color: var(--pg-text);
+  font-size: 14px;
+  font-weight: 500;
+  font-family: inherit;
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+  cursor: pointer;
+  transition: background-color 0.15s ease, border-color 0.15s ease,
+    color 0.15s ease;
+}
+ 
+.paging-btn:hover:not(:disabled) {
+  background: var(--pg-hover-bg);
+}
+ 
+/* 현재 페이지: className에 "active"를 붙이거나 aria-current="page"를 주면 적용 */
+.paging-btn.active,
+.paging-btn[aria-current="page"] {
+  border-color: var(--pg-accent);
+  background: var(--pg-accent);
+  color: #fff;
+  font-weight: 700;
+  cursor: default;
+}
+ 
+.paging-btn.active:hover,
+.paging-btn[aria-current="page"]:hover {
+  background: var(--pg-accent);
+}
+ 
+/* 비활성화 (첫/마지막 페이지의 이전·다음 버튼 등) */
+.paging-btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+ 
+.paging-btn:focus-visible {
+  outline: 3px solid rgba(47, 91, 234, 0.4);
+  outline-offset: 2px;
+}
+
+/* ===== 페이징 아이콘 버튼 (기존 .paging / .paging-btn 스타일에 추가) ===== */
+
+/* 아이콘만 들어가는 버튼: 아이콘을 가운데 정렬 */
+.paging-btn--icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  min-width: 36px;   /* 숫자 버튼과 같은 크기로 맞추세요 */
+  height: 36px;
+}
+
+/* 아이콘 (버튼의 글자색을 그대로 따라감) */
+.paging-btn__icon {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  pointer-events: none; /* 클릭이 svg가 아닌 button에 전달되도록 */
+}
+
+/* 첫/마지막 페이지에서 비활성화된 상태 */
+.paging-btn--icon:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+/* 키보드 포커스 표시 */
+.paging-btn--icon:focus-visible {
+  outline: 3px solid rgba(47, 91, 234, 0.4);
+  outline-offset: 2px;
+}
+
+@media (max-width: 480px) {
+  .paging-btn--icon {
+    min-width: 32px;
+    height: 32px;
+  }
+
+  .paging-btn__icon {
+    width: 16px;
+    height: 16px;
+  }
+}

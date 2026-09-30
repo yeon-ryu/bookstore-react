@@ -1,3 +1,5 @@
+import "./Paging.css";
+
 /**
  * click(이동할 페이지, 페이지당 출력 수)
  * page : 현재 페이지
@@ -17,9 +19,9 @@ export default  function Paging({ click, page = 1, perPage = 20, maxCount = 0, u
         btnCnt = (startPage + btnCount - 1) * perPage > maxCount ? (Math.ceil(maxCount / perPage) - startPage + 1) : btnCount;
     }
 
-    return <div>
-        <button className="paging-btn" onClick={() => click(1, perPage)} disabled={page <= 1}>{'<<'}</button>
-        <button className="paging-btn" onClick={() => click(page - 1, perPage)} disabled={page <= 1}>{'<'}</button>
+    return <div className="paging">
+        <button className="paging-btn paging-btn--icon" onClick={() => click(1, perPage)} disabled={page <= 1}><FirstIcon /></button>
+        <button className="paging-btn paging-btn--icon" onClick={() => click(page - 1, perPage)} disabled={page <= 1}><PrevIcon /></button>
 
         {useNumber && Array.from({ length : btnCnt }).map((_, idx) => {
             return <button className="paging-btn" key={idx} onClick={() => click((startPage + idx), perPage)} disabled={(startPage + idx) === page}>
@@ -27,7 +29,33 @@ export default  function Paging({ click, page = 1, perPage = 20, maxCount = 0, u
             </button>
         })}
 
-        <button className="paging-btn" onClick={() => click(page + 1, perPage)} disabled={page * perPage >= maxCount}>{'>'}</button>
-        <button className="paging-btn" onClick={() => click(Math.ceil(maxCount / perPage), perPage)} disabled={page * perPage >= maxCount}>{'>>'}</button>
+        <button className="paging-btn paging-btn--icon" onClick={() => click(page + 1, perPage)} disabled={page * perPage >= maxCount}><NextIcon /></button>
+        <button className="paging-btn paging-btn--icon" onClick={() => click(Math.ceil(maxCount / perPage), perPage)} disabled={page * perPage >= maxCount}><LastIcon /></button>
     </div>
 }
+
+const FirstIcon = () => (
+  <svg className="paging-btn__icon" viewBox="0 0 24 24" aria-hidden="true">
+    <path d="M11 17l-5-5 5-5" />
+    <path d="M18 17l-5-5 5-5" />
+  </svg>
+);
+ 
+const PrevIcon = () => (
+  <svg className="paging-btn__icon" viewBox="0 0 24 24" aria-hidden="true">
+    <path d="M15 18l-6-6 6-6" />
+  </svg>
+);
+ 
+const NextIcon = () => (
+  <svg className="paging-btn__icon" viewBox="0 0 24 24" aria-hidden="true">
+    <path d="M9 18l6-6-6-6" />
+  </svg>
+);
+ 
+const LastIcon = () => (
+  <svg className="paging-btn__icon" viewBox="0 0 24 24" aria-hidden="true">
+    <path d="M13 17l5-5-5-5" />
+    <path d="M6 17l5-5-5-5" />
+  </svg>
+);
