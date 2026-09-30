@@ -48,20 +48,22 @@ export default function BookDetail() {
     if(loading) return <Loading />
     if(error) return <Error error={error} />
 
-    return <>
+    return <div className="page-container">
         <div className="img-container">
             <img src={book.image} alt={book.name} />
         </div>
         <div className="book-detail-content">
-            <h2>{book.name}</h2>
-            <span onClick={() => router.push(`/?writer=${book.writer}`)}>{book.writer}</span> 
-            <span onClick={() => router.push(`/?category=${book.category}`)}>{book.category}</span>
-            <h3>{book.price?.toLocaleString()}원</h3>
-            <div>{book.description}</div>
+            <h2 className="book-detail-title">{book.name}</h2>
+            <p className="book-detail-meta">
+                <span onClick={() => router.push(`/?writer=${book.writer}`)}>{book.writer}</span> 
+                <span onClick={() => router.push(`/?category=${book.category}`)}>{book.category}</span>
+            </p>
+            <p className="book-detail-price">{book.price?.toLocaleString()}원</p>
+            <p className="book-detail-desc">{book.description}</p>
         </div>
-        <div>
+        <div className="btn-container">
             <button className="action-btn save" onClick={addBookToCart}>장바구니 담기</button>
             <button className="action-btn warning" onClick={() => router.push(`/manage?bookId=${book.id}`)}>도서 수정</button>
         </div>
-    </>
+    </div>
 }
