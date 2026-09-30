@@ -1,0 +1,209 @@
+/* ===== 헤더 ===== */
+
+.app-header {
+  --hd-text: #1f2933;
+  --hd-muted: #6b7280;
+  --hd-border: #e5e7eb;
+  --hd-accent: #2f5bea;
+  --hd-accent-bg: #eef2ff;
+  --hd-hover-bg: #f3f4f6;
+  --hd-badge: #e5484d;
+
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #fff;
+  border-bottom: 1px solid var(--hd-border);
+  font-family: -apple-system, BlinkMacSystemFont, "Pretendard", "Noto Sans KR",
+    "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+}
+
+.app-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  height: 64px;
+  padding: 0 24px;
+  box-sizing: border-box;
+  background-color: beige;
+}
+
+/* 제목 (메인 페이지 링크) */
+.app-header__title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+  color: var(--hd-text);
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.app-header__title:hover {
+  color: var(--hd-accent);
+}
+
+.app-header__logo {
+  flex-shrink: 0;
+  width: 26px;
+  height: 26px;
+  fill: none;
+  stroke: var(--hd-accent);
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transform: translateY(5px)
+}
+
+@font-face {
+    font-family: 'SchoolSafetyRoundedSmile';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-5@1.0/HakgyoansimDunggeunmisoTTF-B.woff2') format('woff2');
+    font-weight: 700;
+    font-display: swap;
+}
+
+.app-header__title-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-family: 'SchoolSafetyRoundedSmile';
+  font-size: 24px;
+}
+
+/* 오른쪽 아이콘 영역 */
+.app-header__actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.app-header__action {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  color: var(--hd-muted);
+  text-decoration: none;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.app-header__action:hover {
+  background: var(--hd-hover-bg);
+  color: var(--hd-text);
+}
+
+.app-header__action.is-active {
+  background: var(--hd-accent-bg);
+  color: var(--hd-accent);
+}
+
+.app-header__action:focus-visible,
+.app-header__title:focus-visible {
+  outline: 3px solid rgba(47, 91, 234, 0.4);
+  outline-offset: 2px;
+  border-radius: 10px;
+}
+
+.app-header__icon {
+  width: 24px;
+  height: 24px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* 아이콘 + 배지를 묶는 래퍼 (배지의 기준 위치) */
+.app-header__icon-wrap {
+  position: relative;
+  display: inline-flex;
+  width: 24px;
+  height: 24px;
+}
+
+/* 장바구니 개수 배지 */
+.app-header__badge {
+  position: absolute;
+  top: -7px;
+  left: 14px;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 5px;
+  box-sizing: border-box;
+  border: 2px solid #fff;
+  border-radius: 9px;
+  background: var(--hd-badge);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 14px;
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+}
+
+/* 아이콘 hover 시 이름 툴팁 */
+.app-header__action::after {
+  content: attr(data-label);
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 50%;
+  padding: 4px 8px;
+  border-radius: 6px;
+  background: var(--hd-text);
+  color: #fff;
+  font-size: 12px;
+  white-space: nowrap;
+  transform: translateX(-50%);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s ease;
+}
+
+.app-header__action:hover::after,
+.app-header__action:focus-visible::after {
+  opacity: 1;
+}
+
+/* ===== 모션 최소화 ===== */
+@media (prefers-reduced-motion: reduce) {
+  .app-header__action,
+  .app-header__action::after {
+    transition: none;
+  }
+}
+
+/* ===== 모바일 ===== */
+@media (max-width: 560px) {
+  .app-header__inner {
+    height: 56px;
+    padding: 0 12px;
+  }
+
+  .app-header__title {
+    font-size: 15px;
+    gap: 6px;
+  }
+
+  .app-header__logo {
+    width: 22px;
+    height: 22px;
+  }
+
+  .app-header__action {
+    width: 40px;
+    height: 40px;
+  }
+
+  /* 터치 화면에서는 툴팁 숨김 */
+  .app-header__action::after {
+    display: none;
+  }
+}
