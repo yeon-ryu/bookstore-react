@@ -1,6 +1,7 @@
 'use client'
 
 import { bookApi } from "@/api/bookAPI";
+import Empty from "@/components/Empty";
 import Error from "@/components/Error";
 import Loading from "@/components/Loading";
 import Paging from "@/components/Paging";
@@ -94,6 +95,8 @@ export default function Home() {
           <input className="search-input" type="text" name="writer" value={filterValue.writer} onChange={e => changeFilterValue(e)} placeholder="작가명 검색" />
           <button onClick={() => {setPaging({page : 1, perPage : 20}); setRefresh(true);}}>검색</button>
         </div>
+
+        {(!bookList || bookList.length === 0) && <Empty />}
 
         {bookList.map(book => (<Link href={`/book/${book.id}`} className="book-card" key={book.id}>
           <img src={book.image} alt={book.name} />

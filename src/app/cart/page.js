@@ -1,6 +1,7 @@
 'use client'
 
 import { purchaseApi } from "@/api/purchaseAPI";
+import Empty from "@/components/Empty";
 import Error from "@/components/Error";
 import { useCartStore } from "@/stores/useCartStore"
 import Link from "next/link";
@@ -41,6 +42,7 @@ export default function Cart() {
     }
 
     if(error) return <Error error={error} />
+    if(!cart || cart.length === 0) return <Empty />
 
     return <>
         <h1>장바구니</h1>

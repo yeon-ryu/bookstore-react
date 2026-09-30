@@ -1,6 +1,7 @@
 'use client'
 
 import { purchaseApi } from "@/api/purchaseAPI";
+import Empty from "@/components/Empty";
 import Error from "@/components/Error";
 import Loading from "@/components/Loading";
 import { useEffect, useState } from "react"
@@ -31,6 +32,7 @@ export default function Purchase() {
 
     if(loading) <Loading />
     if(error) <Error error={error} />
+    if(!purchaseList || purchaseList.length === 0) return <Empty />
 
     return <div className="list-container">
         {purchaseList.map(purchase => (<div className="book-card" key={purchase.id}>
