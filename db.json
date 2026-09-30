@@ -375,6 +375,72 @@
       "category": "그림책",
       "image": "https://image.yes24.com/goods/118499360/XL",
       "id": "sj9PPs4tQ2s"
+    },
+    {
+      "bookId": "ixetqy6NfUo",
+      "count": 1,
+      "price": "1729",
+      "purchaseDate": "2026-09-30T06:53:45.545Z",
+      "name": "돼지책",
+      "writer": "이수민",
+      "category": "국내도서",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRa9UD_xP4xV4B3KZmhNGwBs23S48a7vJI-lCERMAW8Pg&s=10",
+      "id": "95nRcQJlIZ0"
+    },
+    {
+      "bookId": "xJJ6xJfjTeQ",
+      "count": 2,
+      "price": "3144",
+      "purchaseDate": "2026-09-30T06:53:45.546Z",
+      "name": "숲속의 작은 집",
+      "writer": "이수민",
+      "category": "국내도서",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtLCKWFliPyXSuBLkrbXlhu_zLvAFvUyj8U9hfgAXflQ&s=10",
+      "id": "h1yMGKpIHpQ"
+    },
+    {
+      "bookId": "9788949105544",
+      "count": 1,
+      "price": 13500,
+      "purchaseDate": "2026-09-30T06:53:45.547Z",
+      "name": "올빼미 기사2",
+      "writer": "Knight Owl",
+      "category": "그림책",
+      "image": "https://image.yes24.com/goods/118499360/XL",
+      "id": "lZk2lPKpVCg"
+    },
+    {
+      "bookId": "ixetqy6NfUo",
+      "count": 1,
+      "price": "1729",
+      "purchaseDate": "2026-09-30T06:54:12.777Z",
+      "name": "돼지책",
+      "writer": "이수민",
+      "category": "국내도서",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRa9UD_xP4xV4B3KZmhNGwBs23S48a7vJI-lCERMAW8Pg&s=10",
+      "id": "zLBT2-GxyB4"
+    },
+    {
+      "bookId": "xJJ6xJfjTeQ",
+      "count": 2,
+      "price": "3144",
+      "purchaseDate": "2026-09-30T06:54:12.778Z",
+      "name": "숲속의 작은 집",
+      "writer": "이수민",
+      "category": "국내도서",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtLCKWFliPyXSuBLkrbXlhu_zLvAFvUyj8U9hfgAXflQ&s=10",
+      "id": "89eR1ac3vvk"
+    },
+    {
+      "bookId": "9788949105544",
+      "count": 1,
+      "price": 13500,
+      "purchaseDate": "2026-09-30T06:54:12.778Z",
+      "name": "올빼미 기사2",
+      "writer": "Knight Owl",
+      "category": "그림책",
+      "image": "https://image.yes24.com/goods/118499360/XL",
+      "id": "IPAIhSB_z0U"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

@@ -4,6 +4,7 @@ import { purchaseApi } from "@/api/purchaseAPI";
 import Empty from "@/components/Empty";
 import Error from "@/components/Error";
 import { DeleteButton } from "@/components/Icon";
+import Loading from "@/components/Loading";
 import { useCartStore } from "@/stores/useCartStore"
 import Link from "next/link";
 import { useState } from "react";
@@ -12,18 +13,23 @@ export default function Cart() {
     const { cart, updateCount, deleteBook, resetCart } = useCartStore();
 
     const [error, setError] = useState(null);
+    const [loading, setLoading] = useState(false);
 
-    const handlePurchase = () => {
+    const handlePurchase = async() => {
         setError(null);
+        setLoading(true);
 
-        cart.forEach(async(b) => {
-            try{
-                await purchaseApi.purchase({...b, count : Number(b.count)});
-                deleteBook(b.bookId);
-            } catch (error) {
-                setError(error);
-            }
-        });
+        try {
+            const purchaseDate = new Date();
+            const purchase = cart.map(async(b) => purchaseApi.purchase({...b, count : Number(b.count), purchaseDate : purchaseDate}));
+            const result = await Promise.all(purchase);
+            resetCart();
+            alert("결제가 성공했습니다!");
+        } catch (error) {
+            setError(error);
+        } finally {
+            setLoading(false);
+        }
     }
 
     const handleUpdate = (id, e) => {
@@ -42,6 +48,7 @@ export default function Cart() {
         }
     }
 
+    if(loading) return <Loading />
     if(error) return <Error error={error} />
     if(!cart || cart.length === 0) return <Empty />
 
