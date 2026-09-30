@@ -11,10 +11,8 @@ src/
 ├─ api/           bookAPI, purchaseAPI
 └─ stores/        useCartStore
 ```
-CSS 는 AI Claude 를 활용했습니다.
 
 &nbsp;
-
 
 ## 실행
 http://localhost:3000
@@ -34,3 +32,9 @@ npm run server
 npm install zustand
 npm install -D json-server
 ```
+
+&nbsp;
+
+### 사용 AI
+**Claude**  
+사용 범위 : CSS
