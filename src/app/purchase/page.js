@@ -4,6 +4,7 @@ import { purchaseApi } from "@/api/purchaseAPI";
 import Empty from "@/components/Empty";
 import Error from "@/components/Error";
 import Loading from "@/components/Loading";
+import Paging from "@/components/Paging";
 import { useEffect, useRef, useState } from "react"
 
 export default function Purchase() {
@@ -11,6 +12,7 @@ export default function Purchase() {
     const [error, setError] = useState(null);
 
     const [purchaseList, setPurchaseList] = useState([]);
+    const [paging, setPaging] = useState({page : 1, perPage : 40});
     const prevPurchaseId = useRef('');
 
     const getPurchaseList = async() => {
@@ -19,7 +21,7 @@ export default function Purchase() {
 
         try {
             const result = await purchaseApi.getPurchaseList();
-            setPurchaseList(result);
+            setPurchaseList(result.data);
         } catch (e) {
             setError(e);
         } finally {
@@ -40,14 +42,14 @@ export default function Purchase() {
 
     useEffect(() => {
         getPurchaseList();
-    }, []);
+    }, [paging]);
 
     if(loading) <Loading />
     if(error) <Error error={error} />
     if(!purchaseList || purchaseList.length === 0) return <Empty />
 
     return <div className="page-container">
-            <div className="list-container">
+        <div className="list-container">
             {purchaseList.map(purchase => (<div key={purchase.id}>
                 {splitOrder(purchase.purchaseId, purchase.purchaseDate)}
                 <div className="book-card">
@@ -65,6 +67,8 @@ export default function Purchase() {
                     </div>
                 </div>
             </div>))}
+            <Paging click={(movePage) => setPaging({...paging, page : movePage})}
+                      page={paging.page} perPage={paging.perPage} useNumber={false} />
         </div>
     </div>
 }

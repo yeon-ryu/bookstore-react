@@ -484,6 +484,30 @@
       "category": "그림책",
       "image": "https://image.yes24.com/goods/91542023/XL",
       "id": "SI6zLsFuZqU"
+    },
+    {
+      "bookId": "9788936429875",
+      "count": 1,
+      "price": 16000,
+      "purchaseDate": "2026-09-30T08:32:26.304Z",
+      "purchaseId": "179075714630480",
+      "name": "복숭아와 애벌레2",
+      "writer": "안녕달",
+      "category": "그림책",
+      "image": "https://image.yes24.com/goods/193102295/XL",
+      "id": "LzMqgseKjsw"
+    },
+    {
+      "bookId": "9788970943477",
+      "count": 3,
+      "price": 12000,
+      "purchaseDate": "2026-09-30T08:34:44.847Z",
+      "purchaseId": "179075728484701",
+      "name": "달님 안녕",
+      "writer": "하야시 아키코",
+      "category": "그림책",
+      "image": "https://image.yes24.com/goods/102710362/XL",
+      "id": "s42pBmI_nks"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

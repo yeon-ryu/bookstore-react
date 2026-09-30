@@ -20,17 +20,17 @@ export default  function Paging({ click, page = 1, perPage = 20, maxCount = 0, u
     }
 
     return <div className="paging">
-        <button className="paging-btn paging-btn--icon" onClick={() => click(1, perPage)} disabled={page <= 1}><FirstIcon /></button>
-        <button className="paging-btn paging-btn--icon" onClick={() => click(page - 1, perPage)} disabled={page <= 1}><PrevIcon /></button>
+        <button className="paging-btn paging-btn--icon" onClick={() => click(1)} disabled={page <= 1}><FirstIcon /></button>
+        <button className="paging-btn paging-btn--icon" onClick={() => click(page - 1)} disabled={page <= 1}><PrevIcon /></button>
 
         {useNumber && Array.from({ length : btnCnt }).map((_, idx) => {
-            return <button className="paging-btn" key={idx} onClick={() => click((startPage + idx), perPage)} disabled={(startPage + idx) === page}>
+            return <button className="paging-btn" key={idx} onClick={() => click((startPage + idx))} disabled={(startPage + idx) === page}>
                 {(startPage + idx)}
             </button>
         })}
 
-        <button className="paging-btn paging-btn--icon" onClick={() => click(page + 1, perPage)} disabled={page * perPage >= maxCount}><NextIcon /></button>
-        <button className="paging-btn paging-btn--icon" onClick={() => click(Math.ceil(maxCount / perPage), perPage)} disabled={page * perPage >= maxCount}><LastIcon /></button>
+        <button className="paging-btn paging-btn--icon" onClick={() => click(page + 1)} disabled={page * perPage >= maxCount}><NextIcon /></button>
+        <button className="paging-btn paging-btn--icon" onClick={() => click(Math.ceil(maxCount / perPage))} disabled={page * perPage >= maxCount}><LastIcon /></button>
     </div>
 }
 

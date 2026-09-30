@@ -25,6 +25,11 @@ export default function Cart() {
             const purchase = cart.filter(b => b.checked).map(async(b) => purchaseApi.purchase({...b, count : Number(b.count)
                 , purchaseDate : purchaseDate, purchaseId : purchaseId}));
             const result = await Promise.all(purchase);
+            if(result.length === 0) {
+                alert("결제할 상품이 없습니다!");
+                setLoading(false);
+                return;
+            }
             let sum = 0;
             result.forEach((r) => {
                 sum += r.price * r.count;

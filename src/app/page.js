@@ -76,19 +76,19 @@ export default function Home() {
       <div className="side-bar">
         <p className="side-bar-title">카테고리</p>
         <input type="radio" id="category-all" name="category" value="" checked={filterValue.category === ""}
-          onChange={e => {changeFilterValue(e); setRefresh(true);}} className="category-input" />
+          onChange={e => {changeFilterValue(e); setPaging({...paging, page : 1});}} className="category-input" />
         <label htmlFor="category-all">전체</label>
         <input type="radio" id="category-local" name="category" value="국내도서" checked={filterValue.category === "국내도서"}
-          onChange={e => {changeFilterValue(e); setRefresh(true);}} className="category-input" />
+          onChange={e => {changeFilterValue(e); setPaging({...paging, page : 1});}} className="category-input" />
         <label htmlFor="category-local">국내도서</label>
         <input type="radio" id="category-foreign" name="category" value="외국도서" checked={filterValue.category === "외국도서"}
-          onChange={e => {changeFilterValue(e); setRefresh(true);}} className="category-input" />
+          onChange={e => {changeFilterValue(e); setPaging({...paging, page : 1});}} className="category-input" />
         <label htmlFor="category-foreign">외국도서</label>
         <input type="radio" id="category-pricture" name="category" value="그림책" checked={filterValue.category === "그림책"}
-          onChange={e => {changeFilterValue(e); setRefresh(true);}} className="category-input" />
+          onChange={e => {changeFilterValue(e); setPaging({...paging, page : 1});}} className="category-input" />
         <label htmlFor="category-pricture">그림책</label>
         <input type="radio" id="category-ebook" name="category" value="전자책" checked={filterValue.category === "전자책"}
-          onChange={e => {changeFilterValue(e); setRefresh(true);}} className="category-input" />
+          onChange={e => {changeFilterValue(e); setPaging({...paging, page : 1});}} className="category-input" />
         <label htmlFor="category-ebook">전자책</label>
       </div>
 
@@ -118,7 +118,7 @@ export default function Home() {
           </div>
         </Link>))}
 
-        <Paging click={(movePage, itemsPerPage) => setPaging({page : movePage, perPage : itemsPerPage})}
+        <Paging click={(movePage) => setPaging({...paging, page : movePage})}
           page={paging.page} perPage={paging.perPage} maxCount={itemMaxCount} useNumber={true} />
       </div>
     </div>
