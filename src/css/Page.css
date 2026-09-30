@@ -1,15 +1,18 @@
 /* ===== 페이지 레이아웃 ===== */
 
 .page-container {
-  display: flex;
   width: 100%;
   max-width: 1000px;
   margin: 0 auto;
   min-height: calc(100vh - 64px); /* 헤더 높이(64px)만큼 제외 */
 }
 
+.main {
+  display: flex;
+}
+
 /* 사이드바 옆의 본문 영역이 남는 공간을 차지하도록 */
-.page-container > :not(.side-bar) {
+.main > :not(.side-bar) {
   flex: 1;
   min-width: 0;
 }

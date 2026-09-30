@@ -72,7 +72,7 @@ export default function Home() {
 
   // 검색 창, 검색 버튼 누르면 getBookList 호출, bookList 출력
   return (
-    <div className="page-container">
+    <div className="page-container main">
       <div className="side-bar">
         <p className="side-bar-title">카테고리</p>
         <input type="radio" id="category-all" name="category" value="" checked={filterValue.category === ""}
@@ -106,8 +106,8 @@ export default function Home() {
         {bookList.map(book => (<Link href={`/book/${book.id}`} className="book-card" key={book.id}>
           <img src={book.image} alt={book.name} />
           <div className="book-content">
-            <strong className="book-title">{book.name}</strong><br/>
-            <p className="book-meta"><span>{book.writer}</span><span>{book.category}</span></p><br/>
+            <strong className="book-title">{book.name}</strong>
+            <p className="book-meta"><span>{book.writer}</span><span>{book.category}</span></p>
             <p className="book-desc">{book.description}</p>
           </div>
           <div className="right-content">

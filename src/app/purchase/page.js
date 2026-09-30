@@ -34,24 +34,26 @@ export default function Purchase() {
     if(error) <Error error={error} />
     if(!purchaseList || purchaseList.length === 0) return <Empty />
 
-    return <div className="list-container">
-        {purchaseList.map(purchase => (<div className="book-card" key={purchase.id}>
-            <div>
-                <p>주문 번호 : {purchase.id}</p>
-                <p>주문 날짜 : {(new Date(purchase.purchaseDate)).toLocaleString('ko-KR')}</p>
-            </div>
-            <div>
-                <img src={purchase.image} alt={purchase.name} />
-            </div>
-            <div className="book-content">
-                <strong>{purchase.name}</strong><br/>
-                <p>{purchase.writer} {purchase.category}</p><br/>
-                <p>{purchase.description}</p>
-            </div>
-            <div className="right-content">
-                {purchase.price?.toLocaleString()}원<br/>
-                수량 : {purchase.count}개
-            </div>
-        </div>))}
+    return <div className="page-container">
+            <div className="list-container">
+            {purchaseList.map(purchase => (<div className="book-card" key={purchase.id}>
+                <div className="purchase-content">
+                    <p>주문번호 : {purchase.id}</p>
+                    <p>주문일시 : {(new Date(purchase.purchaseDate)).toLocaleString('ko-KR')}</p>
+                </div>
+                <div>
+                    <img src={purchase.image} alt={purchase.name} />
+                </div>
+                <div className="book-content">
+                    <strong className="book-title">{purchase.name}</strong>
+                    <p className="book-meta"><span>{purchase.writer}</span><span>{purchase.category}</span></p>
+                    <p className="book-desc">{purchase.description}</p>
+                </div>
+                <div className="right-content">
+                    {purchase.price?.toLocaleString()}원<br/>
+                    수량 : {purchase.count}개
+                </div>
+            </div>))}
+        </div>
     </div>
 }

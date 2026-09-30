@@ -44,29 +44,42 @@ export default function Cart() {
     if(error) return <Error error={error} />
     if(!cart || cart.length === 0) return <Empty />
 
-    return <>
-        <h1>장바구니</h1>
-        <div className="flex-container"><button className="error right-content" onClick={resetCart}>장바구니 비우기</button></div>
+    return <div className="page-container">
+        <div className="list-container">
+            <button className="action-btn error right-content" onClick={resetCart}>장바구니 비우기</button>
+        </div>
 
         <div className="list-container">
             {cart.map(book => (<div className="book-card" key={book.id}>
             <Link href={`/book/${book.id}`}><img src={book.image} alt={book.name} /></Link>
             <div className="book-content">
-                <strong>{book.name}</strong><br/>
-                <p>{book.writer} {book.category}</p><br/>
-                <p>{book.description}</p>
+                <strong className="book-title">{book.name}</strong>
+                <p className="book-meta"><span>{book.writer}</span><span>{book.category}</span></p>
+                <p className="book-desc">{book.description}</p>
             </div>
             <div className="right-content">
                 {book.price?.toLocaleString()}원
-                <label htmlFor="count">수량</label>
-                <input type="number" name="count" value={book.count} onChange={e => handleUpdate(book.id, e)} />
-                <button className="error" onClick={e => handleDelete(book.id)}>삭제 아이콘</button>
+                <div className="input-group">
+                    <label htmlFor="count">수량</label>
+                    <input type="number" name="count" value={book.count} onChange={e => handleUpdate(book.id, e)} />
+                </div>
+                <button className="delete-btn" onClick={e => handleDelete(book.id)}><DeleteButton /></button>
             </div>
             </div>))}
         </div>
 
-        <div className="flex-container">
-            <button className="right-content round-btn" onClick={handlePurchase}>결제</button>
+        <div className="list-container">
+            <button className="action-btn info" onClick={handlePurchase}>결제</button>
         </div>
-    </>
+    </div>
+}
+
+const DeleteButton = () => {
+    return <svg className="delete-btn__icon" viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M3 6h18" />
+      <path d="M8 6V4a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v2" />
+      <path d="M19 6l-1 14a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1L5 6" />
+      <path d="M10 11v6" />
+      <path d="M14 11v6" />
+    </svg>;
 }
