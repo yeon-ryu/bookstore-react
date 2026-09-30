@@ -10,7 +10,7 @@
       "image": "https://image.yes24.com/goods/118499360/XL"
     },
     {
-      "id": "9788949105544",
+      "id": "9788949105890",
       "name": "올빼미 기사2",
       "category": "그림책",
       "writer": "Knight Owl",
@@ -19,75 +19,156 @@
       "image": "https://image.yes24.com/goods/118499360/XL"
     },
     {
-      "id": "9788936434120",
-      "name": "달빛 우체국",
+      "id": "9788901224118",
+      "name": "팥빙수의 전설",
       "category": "그림책",
-      "writer": "김하늘",
-      "description": "달빛이 비추는 밤마다 편지를 배달하는 작은 우체국의 따뜻한 이야기 <수정>",
-      "price": 14000,
-      "image": "https://image.yes24.com/goods/118499360/XL"
-    },
-    {
-      "id": "9788949167320",
-      "name": "고양이 우체부",
-      "category": "그림책",
-      "writer": "박지우",
-      "description": "마을 곳곳에 편지를 전하는 고양이 우체부의 즐거운 모험 이야기",
+      "writer": "이지은",
+      "description": "눈호랑이와 팥빙수의 유쾌한 이야기",
       "price": 13000,
-      "image": "https://image.yes24.com/goods/118499360/XL"
+      "image": "https://image.yes24.com/goods/91542023/XL"
     },
     {
-      "id": "9788936458127",
-      "name": "구름 빵집",
+      "id": "9788970943477",
+      "name": "달님 안녕",
       "category": "그림책",
-      "writer": "최은별",
-      "description": "구름으로 빵을 만드는 신기한 빵집에서 벌어지는 따뜻하고 재미있는 이야기",
-      "price": 14500,
-      "image": "https://image.yes24.com/goods/118499360/XL"
+      "writer": "하야시 아키코",
+      "description": "밤하늘 달님과 인사해요",
+      "price": 12000,
+      "image": "https://image.yes24.com/goods/102710362/XL"
     },
     {
-      "id": "9788957074318",
-      "name": "꼬마 여우의 모험",
+      "id": "9788955822125",
+      "name": "만희네 집",
       "category": "그림책",
-      "writer": "정다온",
-      "description": "용기를 내어 처음으로 숲을 떠난 꼬마 여우가 새로운 친구를 만나는 이야기",
-      "price": 12500,
-      "image": "https://image.yes24.com/goods/118499360/XL"
+      "writer": "권윤덕",
+      "description": "만희네 집을 구석구석 살펴봐요",
+      "price": 13000,
+      "image": "https://image.yes24.com/goods/129083112/XL"
     },
     {
-      "id": "9788936449217",
-      "name": "별을 세는 아이",
+      "id": "9788936429690",
+      "name": "복숭아와 애벌레",
       "category": "그림책",
-      "writer": "한서윤",
-      "description": "밤하늘의 별을 세며 자신의 꿈을 찾아가는 아이의 아름다운 이야기",
+      "writer": "안녕달",
+      "description": "복숭아와 작은 애벌레가 함께 보내는 따뜻하고 사랑스러운 이야기",
       "price": 16000,
-      "image": "https://image.yes24.com/goods/118499360/XL"
+      "image": "https://image.yes24.com/goods/193102295/XL"
     },
     {
-      "id": "9788954648123",
-      "name": "바다를 건너온 편지",
+      "id": "9788936429430",
+      "name": "별에게",
       "category": "그림책",
-      "writer": "윤서진",
-      "description": "아주 먼 바다를 건너 도착한 한 통의 편지가 만들어 낸 특별한 만남",
+      "writer": "안녕달",
+      "description": "바닷가 마을에서 만난 별과 가족의 따뜻한 사계절 이야기",
+      "price": 16000,
+      "image": "https://image.yes24.com/goods/144164150/XL"
+    },
+    {
+      "id": "9788936429875",
+      "name": "복숭아와 애벌레2",
+      "category": "그림책",
+      "writer": "안녕달",
+      "description": "복숭아와 작은 애벌레가 함께 보내는 따뜻하고 사랑스러운 이야기",
+      "price": 16000,
+      "image": "https://image.yes24.com/goods/193102295/XL"
+    },
+    {
+      "id": "9788936429345",
+      "name": "별에게2",
+      "category": "그림책",
+      "writer": "안녕달",
+      "description": "바닷가 마을에서 만난 별과 가족의 따뜻한 사계절 이야기",
+      "price": 16000,
+      "image": "https://image.yes24.com/goods/144164150/XL"
+    },
+    {
+      "id": "9788936429999",
+      "name": "복숭아와 애벌레3",
+      "category": "그림책",
+      "writer": "안녕달",
+      "description": "복숭아와 작은 애벌레가 함께 보내는 따뜻하고 사랑스러운 이야기",
+      "price": 16000,
+      "image": "https://image.yes24.com/goods/193102295/XL"
+    },
+    {
+      "id": "9788936429456",
+      "name": "별에게3",
+      "category": "그림책",
+      "writer": "안녕달",
+      "description": "바닷가 마을에서 만난 별과 가족의 따뜻한 사계절 이야기",
+      "price": 16000,
+      "image": "https://image.yes24.com/goods/144164150/XL"
+    },
+    {
+      "id": "9788936455040",
+      "name": "할머니의 여름 휴가",
+      "category": "그림책",
+      "writer": "안녕달",
+      "description": "할머니와 강아지가 함께 떠나는 시원하고 유쾌한 여름휴가",
+      "price": 15000,
+      "image": "https://image.yes24.com/goods/39036547/XL"
+    },
+    {
+      "id": "9788949105544",
+      "name": "올빼미 기사",
+      "category": "그림책",
+      "writer": "Christopher Denise",
+      "description": "작은 올빼미가 진정한 기사로 성장해 가는 용감한 이야기",
       "price": 13500,
       "image": "https://image.yes24.com/goods/118499360/XL"
     },
     {
-      "id": "9788936441358",
-      "name": "토끼의 빨간 우산",
+      "id": "9791194344247",
+      "name": "알사탕",
       "category": "그림책",
-      "writer": "김민준",
-      "description": "비 오는 날 빨간 우산 하나로 친구들을 도와주는 토끼의 이야기",
-      "price": 12000,
-      "image": "https://image.yes24.com/goods/118499360/XL"
+      "writer": "백희나",
+      "description": "신기한 알사탕을 통해 마음속 이야기를 듣게 되는 이야기",
+      "price": 14000,
+      "image": "https://image.yes24.com/goods/183918794/XL"
     },
     {
-      "id": "9788952756419",
-      "name": "잠이 오지 않는 밤",
+      "id": "9788936429416",
+      "name": "수박 수영장",
       "category": "그림책",
-      "writer": "오유나",
-      "description": "잠들지 못하는 아이가 밤의 소중한 친구들을 만나며 마음의 평온을 찾는 이야기",
+      "writer": "안녕달",
+      "description": "커다란 수박 속에서 온 마을 사람들이 함께 즐기는 여름 이야기",
+      "price": 14000,
+      "image": "https://image.yes24.com/goods/19427515/XL"
+    },
+    {
+      "id": "9788955825592",
+      "name": "달 샤베트",
+      "category": "그림책",
+      "writer": "백희나",
+      "description": "무더운 여름밤 녹아내린 달로 특별한 샤베트를 만드는 이야기",
+      "price": 12000,
+      "image": "https://image.yes24.com/goods/13434581/XL"
+    },
+    {
+      "id": "9788936454579",
+      "name": "당근 유치원",
+      "category": "그림책",
+      "writer": "안녕달",
+      "description": "처음 유치원에 간 아기 토끼의 귀엽고 따뜻한 하루 이야기",
+      "price": 13000,
+      "image": "https://image.yes24.com/goods/190161662/XL"
+    },
+    {
+      "id": "9788955826865",
+      "name": "눈아이",
+      "category": "그림책",
+      "writer": "안녕달",
+      "description": "겨울날 만난 눈아이와 아이가 함께 나누는 특별한 우정 이야기",
       "price": 15000,
+      "image": "https://image.yes24.com/goods/105106464/XL"
+    },
+    {
+      "id": "9788936434120",
+      "name": "달빛 우체국",
+      "category": "국내도서",
+      "writer": "김하늘",
+      "description": "달빛이 비추는 밤마다 편지를 배달하는 작은 우체국의 따뜻한 이야기 <수정>",
+      "price": 14000,
       "image": "https://image.yes24.com/goods/118499360/XL"
     },
     {
@@ -296,6 +377,15 @@
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtLCKWFliPyXSuBLkrbXlhu_zLvAFvUyj8U9hfgAXflQ&s=10",
       "id": "xJJ6xJfjTeQ",
       "category": "국내도서"
+    },
+    {
+      "category": "외국도서",
+      "name": "책 먹는 여우",
+      "writer": "프란치스카 비어만",
+      "price": "48108",
+      "image": "https://cdn.policetv.co.kr/news/photo/202007/10054_6182_4438.jpg",
+      "description": "‘책 먹는 여우’는 독일작가 프란치스카 비어만이 지은 책으로, 책을 몸과 마음의 양식으로 삼아 책을 먹는 진정한 애서가인 여우의 이야기를 담고 있다.",
+      "id": "QI7FXgslyVk"
     }
   ],
   "purchase": [
@@ -346,6 +436,42 @@
       "category": "국내도서",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtLCKWFliPyXSuBLkrbXlhu_zLvAFvUyj8U9hfgAXflQ&s=10",
       "id": "5EgcPVtuUkk"
+    },
+    {
+      "bookId": "QI7FXgslyVk",
+      "count": 2,
+      "price": "48108",
+      "purchaseDate": "2026-09-30T07:52:00.519Z",
+      "purchaseId": "17907547205197a",
+      "name": "책 먹는 여우",
+      "writer": "프란치스카 비어만",
+      "category": "외국도서",
+      "image": "https://cdn.policetv.co.kr/news/photo/202007/10054_6182_4438.jpg",
+      "id": "1-GjC0tHsm4"
+    },
+    {
+      "bookId": "ixetqy6NfUo",
+      "count": 1,
+      "price": "1729",
+      "purchaseDate": "2026-09-30T07:52:00.519Z",
+      "purchaseId": "17907547205197a",
+      "name": "돼지책",
+      "writer": "이수민",
+      "category": "국내도서",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRa9UD_xP4xV4B3KZmhNGwBs23S48a7vJI-lCERMAW8Pg&s=10",
+      "id": "3oqJbQNBE9Q"
+    },
+    {
+      "bookId": "9788936429430",
+      "count": 1,
+      "price": 16000,
+      "purchaseDate": "2026-09-30T07:52:00.519Z",
+      "purchaseId": "17907547205197a",
+      "name": "별에게",
+      "writer": "안녕달",
+      "category": "그림책",
+      "image": "https://image.yes24.com/goods/144164150/XL",
+      "id": "XbcpBJICqEM"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

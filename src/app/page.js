@@ -77,16 +77,19 @@ export default function Home() {
         <p className="side-bar-title">카테고리</p>
         <input type="radio" id="category-all" name="category" value="" checked={filterValue.category === ""}
           onChange={e => {changeFilterValue(e); setRefresh(true);}} className="category-input" />
-        <label htmlFor="category-all">전체</label><br/>
+        <label htmlFor="category-all">전체</label>
         <input type="radio" id="category-local" name="category" value="국내도서" checked={filterValue.category === "국내도서"}
           onChange={e => {changeFilterValue(e); setRefresh(true);}} className="category-input" />
-        <label htmlFor="category-local">국내도서</label><br/>
+        <label htmlFor="category-local">국내도서</label>
         <input type="radio" id="category-foreign" name="category" value="외국도서" checked={filterValue.category === "외국도서"}
           onChange={e => {changeFilterValue(e); setRefresh(true);}} className="category-input" />
-        <label htmlFor="category-foreign">외국도서</label><br/>
+        <label htmlFor="category-foreign">외국도서</label>
         <input type="radio" id="category-pricture" name="category" value="그림책" checked={filterValue.category === "그림책"}
           onChange={e => {changeFilterValue(e); setRefresh(true);}} className="category-input" />
-        <label htmlFor="category-pricture">그림책</label><br/>
+        <label htmlFor="category-pricture">그림책</label>
+        <input type="radio" id="category-ebook" name="category" value="전자책" checked={filterValue.category === "전자책"}
+          onChange={e => {changeFilterValue(e); setRefresh(true);}} className="category-input" />
+        <label htmlFor="category-ebook">전자책</label>
       </div>
 
       <div className="list-container">
@@ -111,7 +114,7 @@ export default function Home() {
             <p className="book-desc">{book.description}</p>
           </div>
           <div className="right-content">
-            {book.price?.toLocaleString()}원
+            {Number(book.price)?.toLocaleString()}원
           </div>
         </Link>))}
 

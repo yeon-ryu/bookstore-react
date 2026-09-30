@@ -60,7 +60,7 @@ export default function Purchase() {
                         <p className="book-desc">{purchase.description}</p>
                     </div>
                     <div className="right-content">
-                        {purchase.price?.toLocaleString()}원<br/>
+                        {Number(purchase.price)?.toLocaleString()}원<br/>
                         수량 : {purchase.count}개
                     </div>
                 </div>

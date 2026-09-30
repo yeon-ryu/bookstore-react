@@ -25,8 +25,12 @@ export default function Cart() {
             const purchase = cart.map(async(b) => purchaseApi.purchase({...b, count : Number(b.count)
                 , purchaseDate : purchaseDate, purchaseId : purchaseId}));
             const result = await Promise.all(purchase);
-            resetCart();
-            alert("결제가 성공했습니다!");
+            let sum = 0;
+            result.forEach((r) => {
+                sum += r.price * r.count;
+                deleteBook(r.bookId);
+            });
+            alert(`총액 ${sum}원 결제가 성공했습니다!`);
         } catch (error) {
             setError(error);
         } finally {
@@ -68,7 +72,7 @@ export default function Cart() {
                 <p className="book-desc">{book.description}</p>
             </div>
             <div className="right-content">
-                {book.price?.toLocaleString()}원
+                {Number(book.price)?.toLocaleString()}원
                 <div className="input-group">
                     <label htmlFor="count">수량</label>
                     <input type="number" name="count" value={book.count} onChange={e => handleUpdate(book.id, e)} />

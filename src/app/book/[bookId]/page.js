@@ -58,7 +58,7 @@ export default function BookDetail() {
                 <span onClick={() => router.push(`/?writer=${book.writer}`)}>{book.writer}</span> 
                 <span onClick={() => router.push(`/?category=${book.category}`)}>{book.category}</span>
             </p>
-            <p className="book-detail-price">{book.price?.toLocaleString()}원</p>
+            <p className="book-detail-price">{Number(book.price)?.toLocaleString()}원</p>
             <p className="book-detail-desc">{book.description}</p>
         </div>
         <div className="btn-container">

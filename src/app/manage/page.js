@@ -14,7 +14,7 @@ export default function Manage() {
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
 
-    const [formValue, setFormValue] = useState({});
+    const [formValue, setFormValue] = useState({category : "국내도서"});
 
     const router = useRouter();
 
@@ -51,6 +51,7 @@ export default function Manage() {
             }
         } catch(e) {
             setError(e);
+        } finally {
             setLoading(false);
         }
     }
@@ -111,6 +112,7 @@ export default function Manage() {
                         <option value="국내도서">국내도서</option>
                         <option value="외국도서">외국도서</option>
                         <option value="그림책">그림책</option>
+                        <option value="전자책">전자책</option>
                     </select>
                 </div>
                 <div className="form-group">
