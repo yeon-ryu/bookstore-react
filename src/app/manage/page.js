@@ -2,6 +2,7 @@
 
 import { bookApi } from "@/api/bookAPI";
 import Error from "@/components/Error";
+import { DeleteButton } from "@/components/Icon";
 import Loading from "@/components/Loading";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
@@ -50,7 +51,6 @@ export default function Manage() {
             }
         } catch(e) {
             setError(e);
-        } finally {
             setLoading(false);
         }
     }
@@ -96,17 +96,16 @@ export default function Manage() {
     if(error) return <Error error={error} />
 
     return <>
-        <h1>책 입력폼</h1>
-        {bookId.current && <div className="flex-container"><button className="error right-content" onClick={removeBook}>삭제 아이콘</button></div>}
+        {bookId.current && <div className="list-container"><button className="action-btn right-content error" onClick={removeBook}><DeleteButton /></button></div>}
         <div className="form-container">
             <fieldset>
                 <legend>도서 정보 입력</legend>
 
-                <div>
+                <div className="form-group">
                     <label className="label" htmlFor="name">도서명</label>
                     <input type="text" name="name" value={formValue.name || ''} onChange={e => handleForm(e)} />
                 </div>
-                <div>
+                <div className="form-group">
                     <label className="label" htmlFor="category">카테고리</label>
                     <select name="category" id="" value={formValue.category || ''} onChange={e => handleForm(e)}>
                         <option value="국내도서">국내도서</option>
@@ -114,28 +113,29 @@ export default function Manage() {
                         <option value="그림책">그림책</option>
                     </select>
                 </div>
-                <div>
+                <div className="form-group">
                     <label className="label" htmlFor="writer">작가</label>
                     <input type="text" name="writer" value={formValue.writer || ''} onChange={e => handleForm(e)} />
                 </div>
-                <div>
+                <div className="form-group">
                     <label className="label" htmlFor="price">가격</label>
                     <input type="number" name="price" value={formValue.price || ''} onChange={e => handleForm(e)} />
                 </div>
-                <div>
+                <div className="form-group">
                     <label className="label" htmlFor="description">줄거리</label>
                     <textarea name="description" id="" rows={3} value={formValue.description || ''} onChange={e => handleForm(e)} />
                 </div>
-                <div>
+                <div className="form-group">
                     <label className="label" htmlFor="image">이미지</label>
                     <input type="text" name="image" value={formValue.image || ''} onChange={e => handleForm(e)} />
                 </div>
-                <div className="img-container" style={{height : "100px", textAlign : "left"}}>
+                <div className="form-group">
                     <img src={formValue.image} alt="이미지 미리보기" />
                 </div>
-
-                <button className="action-btn save" onClick={saveBook}>저장</button>
-                <button className="action-btn error" onClick={() => router.push("/")}>취소</button>
+                <div className="form-group">
+                    <button className="action-btn save" onClick={saveBook}>저장</button>
+                    <button className="action-btn error" onClick={() => router.push("/")}>취소</button>
+                </div>
             </fieldset>
         </div>
     </>

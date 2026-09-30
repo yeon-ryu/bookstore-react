@@ -3,6 +3,7 @@
 import { purchaseApi } from "@/api/purchaseAPI";
 import Empty from "@/components/Empty";
 import Error from "@/components/Error";
+import { DeleteButton } from "@/components/Icon";
 import { useCartStore } from "@/stores/useCartStore"
 import Link from "next/link";
 import { useState } from "react";
@@ -72,14 +73,4 @@ export default function Cart() {
             <button className="action-btn info" onClick={handlePurchase}>결제</button>
         </div>
     </div>
-}
-
-const DeleteButton = () => {
-    return <svg className="delete-btn__icon" viewBox="0 0 24 24" aria-hidden="true">
-      <path d="M3 6h18" />
-      <path d="M8 6V4a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v2" />
-      <path d="M19 6l-1 14a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1L5 6" />
-      <path d="M10 11v6" />
-      <path d="M14 11v6" />
-    </svg>;
 }

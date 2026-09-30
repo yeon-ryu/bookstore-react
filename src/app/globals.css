@@ -72,19 +72,3 @@ a {
   color: white;
   --color-primary : #2f5bea;
 }
-
-.img-container {
-  height: 400px;
-  text-align: center;
-}
-
-.img-container img {
-  width: auto;
-  height: 100%;
-}
-
-.round-btn {
-  padding : 5px 12px;
-  margin : 3px;
-  border-radius: 10px;
-}
