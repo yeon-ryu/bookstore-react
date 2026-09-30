@@ -12,7 +12,7 @@ export const useCartStore = create(
                 if(existed) {
                     throw new Error('이미 장바구니에 있는 책입니다.');
                 }
-                set(state => ({cart : [...state.cart, {...book, bookId : book.id, count : 1}], bookCount : state.bookCount + 1}))
+                set(state => ({cart : [...state.cart, {...book, bookId : book.id, count : 1, checked : true}], bookCount : state.bookCount + 1}))
             },
 
             updateCount : (id, cnt) => {
@@ -21,6 +21,8 @@ export const useCartStore = create(
                 }
                 set(state => ({cart : state.cart.map(b => b.bookId === id ? {...b, count : cnt} : b)}));
             },
+
+            updateCheck : (id) => set(state => ({cart : state.cart.map(b => b.bookId === id ? {...b, checked : !b.checked} : b)})),
 
             deleteBook : (id) => set(state => ({cart : state.cart.filter(b => b.bookId !== id), bookCount : state.bookCount - 1})),
 

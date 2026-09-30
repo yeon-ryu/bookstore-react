@@ -472,6 +472,18 @@
       "category": "그림책",
       "image": "https://image.yes24.com/goods/144164150/XL",
       "id": "XbcpBJICqEM"
+    },
+    {
+      "bookId": "9788901224118",
+      "count": 2,
+      "price": 13000,
+      "purchaseDate": "2026-09-30T08:19:16.587Z",
+      "purchaseId": "1790756356587b8",
+      "name": "팥빙수의 전설",
+      "writer": "이지은",
+      "category": "그림책",
+      "image": "https://image.yes24.com/goods/91542023/XL",
+      "id": "SI6zLsFuZqU"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

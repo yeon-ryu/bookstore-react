@@ -10,7 +10,7 @@ import Link from "next/link";
 import { useState } from "react";
 
 export default function Cart() {
-    const { cart, updateCount, deleteBook, resetCart } = useCartStore();
+    const { cart, updateCount, updateCheck, deleteBook, resetCart } = useCartStore();
 
     const [error, setError] = useState(null);
     const [loading, setLoading] = useState(false);
@@ -22,7 +22,7 @@ export default function Cart() {
         try {
             const purchaseDate = new Date();
             const purchaseId = purchaseDate.getTime() + Math.random().toString(16).slice(2, 4);
-            const purchase = cart.map(async(b) => purchaseApi.purchase({...b, count : Number(b.count)
+            const purchase = cart.filter(b => b.checked).map(async(b) => purchaseApi.purchase({...b, count : Number(b.count)
                 , purchaseDate : purchaseDate, purchaseId : purchaseId}));
             const result = await Promise.all(purchase);
             let sum = 0;
@@ -65,6 +65,7 @@ export default function Cart() {
 
         <div className="list-container">
             {cart.map(book => (<div className="book-card" key={book.id}>
+            <input type="checkbox" checked={book.checked} onChange={() => updateCheck(book.id)} />
             <Link href={`/book/${book.id}`}><img src={book.image} alt={book.name} /></Link>
             <div className="book-content">
                 <strong className="book-title">{book.name}</strong>
