@@ -12,7 +12,7 @@ export const purchaseApi = {
             method : "POST",
             headers : {"Content-Typle" : "application/json"},
             body : JSON.stringify({'bookId' : book.bookId, 'count' : book.count, 'price' : book.price, 'purchaseDate' : new Date()
-                , 'name' : book.name, 'writer' : book.writer, 'category' : book.category, 'img' : book.img })
+                , 'name' : book.name, 'writer' : book.writer, 'category' : book.category, 'image' : book.image })
         });
         if(!res.ok) throw new Error("결제하는 중 오류가 발생했습니다!");
 

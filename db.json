@@ -300,44 +300,48 @@
   ],
   "purchase": [
     {
-      "bookId": "9788957078245",
-      "count": 1,
-      "price": 12500,
-      "purchaseDate": "2026-09-29T23:58:29.730Z",
-      "name": "달님과 숨바꼭질",
-      "writer": "최유진",
-      "category": "그림책",
-      "id": "lGxe7MHCzQA"
-    },
-    {
-      "bookId": "9788949105543",
-      "count": 1,
-      "price": 13500,
-      "purchaseDate": "2026-09-29T23:58:29.731Z",
-      "name": "올빼미 기사",
-      "writer": "Knight Owl",
-      "category": "그림책",
-      "id": "LcYA3R0Tad4"
-    },
-    {
-      "bookId": "ixetqy6NfUo",
-      "count": 3,
-      "price": "1729",
-      "purchaseDate": "2026-09-29T23:58:29.731Z",
-      "name": "돼지책",
-      "writer": "이수민",
-      "category": "국내도서",
-      "id": "P7GTHMNr1HE"
-    },
-    {
       "bookId": "xJJ6xJfjTeQ",
-      "count": 2,
+      "count": 1,
       "price": "3144",
-      "purchaseDate": "2026-09-29T23:58:29.732Z",
+      "purchaseDate": "2026-09-30T00:48:05.322Z",
       "name": "숲속의 작은 집",
       "writer": "이수민",
       "category": "외국도서",
-      "id": "0j0iRNVquNU"
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtLCKWFliPyXSuBLkrbXlhu_zLvAFvUyj8U9hfgAXflQ&s=10",
+      "id": "wAPOF9xRnVg"
+    },
+    {
+      "bookId": "9788949105544",
+      "count": 1,
+      "price": 13500,
+      "purchaseDate": "2026-09-30T00:48:05.322Z",
+      "name": "올빼미 기사2",
+      "writer": "Knight Owl",
+      "category": "그림책",
+      "image": "https://image.yes24.com/goods/118499360/XL",
+      "id": "7lN5FM0B-Uo"
+    },
+    {
+      "bookId": "9788949105543",
+      "count": 3,
+      "price": 13500,
+      "purchaseDate": "2026-09-30T00:48:05.323Z",
+      "name": "올빼미 기사",
+      "writer": "Knight Owl",
+      "category": "그림책",
+      "image": "https://image.yes24.com/goods/118499360/XL",
+      "id": "LYf5YfrqSL0"
+    },
+    {
+      "bookId": "ixetqy6NfUo",
+      "count": 10,
+      "price": "1729",
+      "purchaseDate": "2026-09-30T00:48:05.324Z",
+      "name": "돼지책",
+      "writer": "이수민",
+      "category": "국내도서",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRa9UD_xP4xV4B3KZmhNGwBs23S48a7vJI-lCERMAW8Pg&s=10",
+      "id": "D_ZOOcmDE9w"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

@@ -1,6 +1,7 @@
 const BASE_URL = "http://localhost:4000/books";
 
 export const bookApi = {
+    // 페이징 기능을 썼기에 반환된 값의 .data 에 결과값이 들어있다.
     getBookList : async(page = 1, perPage = 20, category = '', name = '', writer = '') => {
         const url = new URL(BASE_URL);
         url.searchParams.append('_page', page);
