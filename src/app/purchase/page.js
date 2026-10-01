@@ -12,7 +12,7 @@ export default function Purchase() {
     const [error, setError] = useState(null);
 
     const [purchaseList, setPurchaseList] = useState([]);
-    const [paging, setPaging] = useState({page : 1, perPage : 40});
+    const [paging, setPaging] = useState({page : 1, perPage : 20});
     const prevPurchaseId = useRef('');
 
     const getPurchaseList = async() => {
