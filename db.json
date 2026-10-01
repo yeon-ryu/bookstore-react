@@ -1,17 +1,8 @@
 {
   "books": [
     {
-      "id": "9788949105543",
-      "name": "올빼미 기사",
-      "category": "그림책",
-      "writer": "Knight Owl",
-      "description": "책 줄거리",
-      "price": 13500,
-      "image": "https://image.yes24.com/goods/118499360/XL"
-    },
-    {
       "id": "9788949105890",
-      "name": "올빼미 기사2",
+      "name": "올빼미 기사",
       "category": "그림책",
       "writer": "Knight Owl",
       "description": "2023 칼데콧 명예상 수상작 『올빼미 기사』가 ㈜비룡소에서 출간되었다. 『올빼미 기사』는 칼데콧 수상과 더불어 뉴욕 타임스 베스트셀러, 아마존 올해의 어린이책, 커커스 올해의 어린이책에 선정 되었고, 출간 즉시 미국에서만 17만 부 이상 판매되고 전 세계 23개국에서 출간된 올해 화제의 그림책이다. 『올빼미 기사』는 기사가 되고 싶어하는 사랑스런 꼬마 올빼미가 진정한 기사로 거듭나는 유쾌한 이야기로, 그림 구석구석 위트와 유머 넘치는 디테일이 돋보이며 예상치 못한 엉뚱하고도 코믹한 반전이 웃음을 유발한다. 이에 중세를 배경으로 한 한 편의 애니메이션을 보는 듯한 웅장한 일러스트가 시선을 잡아끈다.",
@@ -46,15 +37,6 @@
       "image": "https://image.yes24.com/goods/129083112/XL"
     },
     {
-      "id": "9788936429690",
-      "name": "복숭아와 애벌레",
-      "category": "그림책",
-      "writer": "안녕달",
-      "description": "복숭아와 작은 애벌레가 함께 보내는 따뜻하고 사랑스러운 이야기",
-      "price": 16000,
-      "image": "https://image.yes24.com/goods/193102295/XL"
-    },
-    {
       "id": "9788936429430",
       "name": "별에게",
       "category": "그림책",
@@ -82,20 +64,11 @@
       "image": "https://image.yes24.com/goods/144164150/XL"
     },
     {
-      "id": "9788936429999",
-      "name": "복숭아와 애벌레3",
-      "category": "그림책",
-      "writer": "안녕달",
-      "description": "복숭아와 작은 애벌레가 함께 보내는 따뜻하고 사랑스러운 이야기",
-      "price": 16000,
-      "image": "https://image.yes24.com/goods/193102295/XL"
-    },
-    {
       "id": "9788936429456",
       "name": "별에게3",
       "category": "그림책",
       "writer": "안녕달",
-      "description": "바닷가 마을에서 만난 별과 가족의 따뜻한 사계절 이야기",
+      "description": "바닷가 마을에서 만난 별",
       "price": 16000,
       "image": "https://image.yes24.com/goods/144164150/XL"
     },
@@ -107,15 +80,6 @@
       "description": "할머니와 강아지가 함께 떠나는 시원하고 유쾌한 여름휴가",
       "price": 15000,
       "image": "https://image.yes24.com/goods/39036547/XL"
-    },
-    {
-      "id": "9788949105544",
-      "name": "올빼미 기사",
-      "category": "그림책",
-      "writer": "Christopher Denise",
-      "description": "작은 올빼미가 진정한 기사로 성장해 가는 용감한 이야기",
-      "price": 13500,
-      "image": "https://image.yes24.com/goods/118499360/XL"
     },
     {
       "id": "9791194344247",
@@ -390,7 +354,7 @@
   ],
   "purchase": [
     {
-      "bookId": "9788949105544",
+      "bookId": null,
       "count": 1,
       "price": 13500,
       "purchaseDate": "2026-09-30T07:14:31.237Z",
@@ -508,6 +472,54 @@
       "category": "그림책",
       "image": "https://image.yes24.com/goods/102710362/XL",
       "id": "s42pBmI_nks"
+    },
+    {
+      "bookId": "9788949105544",
+      "count": 2,
+      "price": 13500,
+      "purchaseDate": "2026-10-01T08:02:08.093Z",
+      "purchaseId": "179084172809332",
+      "name": "올빼미 기사",
+      "writer": "Christopher Denise",
+      "category": "그림책",
+      "image": "https://image.yes24.com/goods/118499360/XL",
+      "id": "hDgBmo4iXo0"
+    },
+    {
+      "bookId": null,
+      "count": 1,
+      "price": "48108",
+      "purchaseDate": "2026-10-01T08:02:08.093Z",
+      "purchaseId": "179084172809332",
+      "name": "가나다",
+      "writer": "Knight Owl",
+      "category": "전자책",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROQZuKg1eZOlrTMxUl4ng0rDNxAT9OCy_jS7L_5OH2_g&s=10",
+      "id": "KYjfQaKx5J8"
+    },
+    {
+      "bookId": "QI7FXgslyVk",
+      "count": 1,
+      "price": "48108",
+      "purchaseDate": "2026-10-01T08:14:35.315Z",
+      "purchaseId": "17908424753157b",
+      "name": "책 먹는 여우",
+      "writer": "프란치스카 비어만",
+      "category": "외국도서",
+      "image": "https://cdn.policetv.co.kr/news/photo/202007/10054_6182_4438.jpg",
+      "id": "F6Z3UFK-7VM"
+    },
+    {
+      "bookId": "9788949105890",
+      "count": 2,
+      "price": 13500,
+      "purchaseDate": "2026-10-01T08:14:35.315Z",
+      "purchaseId": "17908424753157b",
+      "name": "올빼미 기사",
+      "writer": "Knight Owl",
+      "category": "그림책",
+      "image": "https://image.yes24.com/goods/118499360/XL",
+      "id": "L1dYINajLF8"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
