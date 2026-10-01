@@ -35,6 +35,7 @@ npm install zustand
 npm install -D json-server
 npm install react-router-dom
 ```
+react-router-dom 은 따로 라우터 내장되어 있는 Next.js 에서 사용하면 안 좋다!
 
 &nbsp;
 
