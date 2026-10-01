@@ -15,11 +15,13 @@ src/
 &nbsp;
 
 ## 실행
+### 프론트 실행
 http://localhost:3000
 ```bash
 npm install
 npm run dev
 ```
+### 서버 실행
 서버 : 4000 포트
 ```bash
 npm run server
@@ -31,6 +33,7 @@ npm run server
 ```bash
 npm install zustand
 npm install -D json-server
+npm install react-router-dom
 ```
 
 &nbsp;

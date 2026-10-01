@@ -5,6 +5,7 @@ import Empty from "@/components/Empty";
 import Error from "@/components/Error";
 import Loading from "@/components/Loading";
 import Paging from "@/components/Paging";
+import { useTabStore } from "@/stores/useTabStore";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { Suspense, useEffect, useState } from "react";
@@ -23,6 +24,8 @@ export function Home() {
     name : "",
     writer : ""
   });
+
+  const { openTab } = useTabStore();
 
   // 중복 검색을 피하기 위한 스위치
   const [refresh, setRefresh] = useState(false);
