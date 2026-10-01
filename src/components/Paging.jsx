@@ -17,6 +17,7 @@ export default  function Paging({ click, page = 1, perPage = 20, maxCount = 0, u
 
         // 최대 btnCount개의 버튼 생성(maxCount 보다 많으면 생성 안함)
         btnCnt = (startPage + btnCount - 1) * perPage > maxCount ? (Math.ceil(maxCount / perPage) - startPage + 1) : btnCount;
+        if(btnCnt < 1) btnCnt = 1;
     }
 
     return <div className="paging">
