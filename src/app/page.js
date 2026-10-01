@@ -7,9 +7,9 @@ import Loading from "@/components/Loading";
 import Paging from "@/components/Paging";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
-import { useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 
-export default function Home() {
+export function Home() {
   const searchParam = useSearchParams();
 
   const [loading, setLoading] = useState(false);
@@ -123,4 +123,12 @@ export default function Home() {
       </div>
     </div>
   );
+}
+
+export default function HamePage() {
+  return (
+    <Suspense fallback={<Loading />}>
+      <Home />
+    </Suspense>
+  )
 }

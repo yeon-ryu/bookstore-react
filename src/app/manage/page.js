@@ -5,9 +5,9 @@ import Error from "@/components/Error";
 import { DeleteButton } from "@/components/Icon";
 import Loading from "@/components/Loading";
 import { useRouter, useSearchParams } from "next/navigation";
-import { useEffect, useRef, useState } from "react";
+import { Suspense, useEffect, useRef, useState } from "react";
 
-export default function Manage() {
+export function Manage() {
     const searchParam = useSearchParams();
     const bookId = useRef(null);
 
@@ -141,4 +141,12 @@ export default function Manage() {
             </fieldset>
         </div>
     </>
+}
+
+export default function ManagePage() {
+    return (
+        <Suspense fallback={<Loading />}>
+            <Manage />
+        </Suspense>
+    )
 }
