@@ -43,11 +43,11 @@ export function Manage() {
             if(bookId.current) { // 수정
                 const book = await bookApi.updateBook(bookId.current, formValue);
                 alert("수정을 성공했습니다!");
-                router.push(`/book/${book.id}`);
+                router.replace(`/book/${book.id}`);
             } else { // 추가
                 const book = await bookApi.addBook(formValue);
                 alert("추가를 성공했습니다!");
-                router.push(`/book/${book.id}`);
+                router.replace(`/book/${book.id}`);
             }
         } catch(e) {
             setError(e);
@@ -70,7 +70,7 @@ export function Manage() {
         try {
             await bookApi.deleteBook(bookId.current);
             alert("삭제를 성공했습니다!");
-            router.push("/");
+            router.replace("/");
         } catch(e) {
             setError(e);
         } finally {
