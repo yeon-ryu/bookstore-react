@@ -28,15 +28,6 @@
       "image": "https://image.yes24.com/goods/102710362/XL"
     },
     {
-      "id": "9788955822125",
-      "name": "만희네 집",
-      "category": "그림책",
-      "writer": "권윤덕",
-      "description": "만희네 집을 구석구석 살펴봐요",
-      "price": 13000,
-      "image": "https://image.yes24.com/goods/129083112/XL"
-    },
-    {
       "id": "9788936429430",
       "name": "별에게",
       "category": "그림책",
@@ -44,15 +35,6 @@
       "description": "바닷가 마을에서 만난 별과 가족의 따뜻한 사계절 이야기",
       "price": 16000,
       "image": "https://image.yes24.com/goods/144164150/XL"
-    },
-    {
-      "id": "9788936429875",
-      "name": "복숭아와 애벌레2",
-      "category": "그림책",
-      "writer": "안녕달",
-      "description": "복숭아와 작은 애벌레가 함께 보내는 따뜻하고 사랑스러운 이야기",
-      "price": 16000,
-      "image": "https://image.yes24.com/goods/193102295/XL"
     },
     {
       "id": "9788936429345",
@@ -450,7 +432,7 @@
       "id": "SI6zLsFuZqU"
     },
     {
-      "bookId": "9788936429875",
+      "bookId": null,
       "count": 1,
       "price": 16000,
       "purchaseDate": "2026-09-30T08:32:26.304Z",

@@ -4,6 +4,7 @@ import { bookApi } from "@/api/bookAPI";
 import Error from "@/components/Error";
 import { DeleteButton } from "@/components/Icon";
 import Loading from "@/components/Loading";
+import { useCartStore } from "@/stores/useCartStore";
 import { useRouter, useSearchParams } from "next/navigation";
 import { Suspense, useEffect, useRef, useState } from "react";
 
@@ -15,6 +16,8 @@ export function Manage() {
     const [error, setError] = useState(null);
 
     const [formValue, setFormValue] = useState({category : "국내도서"});
+
+    const { deleteBook } = useCartStore();
 
     const router = useRouter();
 
@@ -67,8 +70,10 @@ export function Manage() {
 
         setLoading(true);
         setError(false);
+
         try {
             await bookApi.deleteBook(bookId.current);
+            deleteBook(bookId.current);
             alert("삭제를 성공했습니다!");
             router.replace("/");
         } catch(e) {
