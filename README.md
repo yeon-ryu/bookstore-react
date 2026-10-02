@@ -84,14 +84,14 @@ src/
 
 ## 트러블슈팅
 ### useSearchParam 문제
--  문제 : npm run dev 에서는 잘 돌아갔지만 npm run build 를 실패함
-- 원인 : useSearchParams 를 통해 서치 파라미터를 읽으면 전체 페이지가 클라이언트 렌더링으로 전환되어 클라이언트 JavaScript 페이지가 로드될 때까지 페이지가 비어있게 된다.
-- 해결 : useSearchParams 를 사용하는 컴포넌트를 Suspense 태그로 감싸서 출력
+-  **문제** : npm run dev 에서는 잘 돌아갔지만 npm run build 를 실패함
+- **원인** : useSearchParams 를 통해 서치 파라미터를 읽으면 전체 페이지가 클라이언트 렌더링으로 전환되어 클라이언트 JavaScript 페이지가 로드될 때까지 페이지가 비어있게 된다.
+- **해결** : useSearchParams 를 사용하는 컴포넌트를 Suspense 태그로 감싸서 출력
 
 ### 중복 검색 문제
-- 리스트 페이지에서 검색이 여러번 일어남
-- 원인 : 페이징이 바꼈을 때, searchParam 이 바꼈을 때 검색을 하고 있었는데 카테고리/검색버튼 눌렸을 때 페이징도 바꾸다보니 처음 페이지 렌더링 될 때 중복 작업이 일어남
-- 해결 : refresh 라는 state 를 만들고 검색이 일어나야하는 경우 전부 setRefresh 를 하고 refresh 가 false 에서 true 로 바꼈을 때만 검색을 하도록 변경했다. setState 는 비동기 처리여서 한꺼번에 처리되기에 중복 검색을 방지할 수 있게 되었다.
+- **문제** : 리스트 페이지에서 검색이 여러번 일어남
+- **원인** : 페이징이 바꼈을 때, searchParam 이 바꼈을 때 검색을 하고 있었는데 카테고리/검색버튼 눌렸을 때 페이징도 바꾸다보니 처음 페이지 렌더링 될 때 중복 작업이 일어남
+- **해결** : refresh 라는 state 를 만들고 검색이 일어나야하는 경우 전부 setRefresh 를 하고 refresh 가 false 에서 true 로 바꼈을 때만 검색을 하도록 변경했다. setState 는 비동기 처리여서 한꺼번에 처리되기에 중복 검색을 방지할 수 있게 되었다.
 
 &nbsp;
 
