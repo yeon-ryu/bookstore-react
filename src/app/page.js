@@ -96,7 +96,7 @@ export function Home() {
         <div className="search-box">
           <input className="search-input" type="text" name="name" value={filterValue.name} onChange={e => changeFilterValue(e)} placeholder="책 제목 검색" />
           <input className="search-input" type="text" name="writer" value={filterValue.writer} onChange={e => changeFilterValue(e)} placeholder="작가명 검색" />
-          <button className="action-btn info" onClick={() => {setPaging({page : 1, perPage : 20}); setRefresh(true);}}>검색</button>
+          <button className="action-btn info" onClick={() => setPaging({...paging, page : 1})}>검색</button>
           <select className="search-select" name="perPage" id="" value={paging.perPage} onChange={e => setPaging({...paging, perPage : e.target.value})} required>
               <option value="20">20개씩 보기</option>
               <option value="30">30개씩 보기</option>
