@@ -22,8 +22,11 @@
 ![리스트](src/image/list.png) | ![상세화면](src/image/detail.png)
 ---|---|
 
-![관리](src/image/form.png) | ![장바구니](src/image/cart.png) | ![구매기록](src/image/order.png)
----|---|---|
+![장바구니](src/image/cart.png) | ![구매기록](src/image/order.png)
+---|---|
+
+![관리](src/image/form.png)
+---|
 
 &nbsp;
 

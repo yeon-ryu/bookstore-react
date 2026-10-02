@@ -6,7 +6,7 @@
       "category": "그림책",
       "writer": "Knight Owl",
       "description": "2023 칼데콧 명예상 수상작 『올빼미 기사』가 ㈜비룡소에서 출간되었다. 『올빼미 기사』는 칼데콧 수상과 더불어 뉴욕 타임스 베스트셀러, 아마존 올해의 어린이책, 커커스 올해의 어린이책에 선정 되었고, 출간 즉시 미국에서만 17만 부 이상 판매되고 전 세계 23개국에서 출간된 올해 화제의 그림책이다. 『올빼미 기사』는 기사가 되고 싶어하는 사랑스런 꼬마 올빼미가 진정한 기사로 거듭나는 유쾌한 이야기로, 그림 구석구석 위트와 유머 넘치는 디테일이 돋보이며 예상치 못한 엉뚱하고도 코믹한 반전이 웃음을 유발한다. 이에 중세를 배경으로 한 한 편의 애니메이션을 보는 듯한 웅장한 일러스트가 시선을 잡아끈다.",
-      "price": 13500,
+      "price": "1350",
       "image": "https://image.yes24.com/goods/118499360/XL"
     },
     {
@@ -14,18 +14,9 @@
       "name": "팥빙수의 전설",
       "category": "그림책",
       "writer": "이지은",
-      "description": "눈호랑이와 팥빙수의 유쾌한 이야기",
+      "description": "눈호랑이와 팥빙수의 유쾌한 이야기 수정 테스트",
       "price": 13000,
       "image": "https://image.yes24.com/goods/91542023/XL"
-    },
-    {
-      "id": "9788970943477",
-      "name": "달님 안녕",
-      "category": "그림책",
-      "writer": "하야시 아키코",
-      "description": "밤하늘 달님과 인사해요",
-      "price": 12000,
-      "image": "https://image.yes24.com/goods/102710362/XL"
     },
     {
       "id": "9788936429430",
@@ -444,7 +435,7 @@
       "id": "LzMqgseKjsw"
     },
     {
-      "bookId": "9788970943477",
+      "bookId": null,
       "count": 3,
       "price": 12000,
       "purchaseDate": "2026-09-30T08:34:44.847Z",
@@ -526,6 +517,18 @@
       "category": "그림책",
       "image": "https://image.yes24.com/goods/118499360/XL",
       "id": "ofsRQQodkWA"
+    },
+    {
+      "bookId": "9788901224118",
+      "count": 1,
+      "price": 13000,
+      "purchaseDate": "2026-10-02T05:04:10.345Z",
+      "purchaseId": "17909174503450a",
+      "name": "팥빙수의 전설",
+      "writer": "이지은",
+      "category": "그림책",
+      "image": "https://image.yes24.com/goods/91542023/XL",
+      "id": "ZJf8Fi186q4"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
