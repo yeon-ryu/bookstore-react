@@ -1,12 +1,12 @@
 'use client'
 
 import { purchaseApi } from "@/api/purchaseAPI";
+import BookCard from "@/components/BookCard";
 import Empty from "@/components/Empty";
 import Error from "@/components/Error";
 import { DeleteButton } from "@/components/Icon";
 import Loading from "@/components/Loading";
 import { useCartStore } from "@/stores/useCartStore"
-import Link from "next/link";
 import { useState } from "react";
 
 export default function Cart() {
@@ -59,9 +59,9 @@ export default function Cart() {
         }
     }
 
-    if(loading) return <Loading />
-    if(error) return <Error error={error} />
-    if(!cart || cart.length === 0) return <Empty />
+    if(loading) return <Loading />;
+    if(error) return <Error error={error} />;
+    if(!cart || cart.length === 0) return <Empty />;
 
     return <div className="page-container">
         <div className="list-container">
@@ -69,23 +69,18 @@ export default function Cart() {
         </div>
 
         <div className="list-container">
-            {cart.map(book => (<div className="book-card" key={book.id}>
-            <input type="checkbox" checked={book.checked} onChange={() => updateCheck(book.id)} />
-            <Link href={`/book/${book.id}`}><img src={book.image} alt={book.name} /></Link>
-            <div className="book-content">
-                <strong className="book-title">{book.name}</strong>
-                <p className="book-meta"><span>{book.writer}</span><span>{book.category}</span></p>
-                <p className="book-desc">{book.description}</p>
-            </div>
-            <div className="right-content">
-                {Number(book.price)?.toLocaleString()}원
-                <div className="input-group">
-                    <label htmlFor="count">수량</label>
-                    <input type="number" name="count" value={book.count} onChange={e => handleUpdate(book.id, e)} />
-                </div>
-                <button className="delete-btn" onClick={e => handleDelete(book.id)}><DeleteButton /></button>
-            </div>
-            </div>))}
+            {cart.map(book => (
+                <BookCard key={book.id} book={book} bookId={book.bookId}
+                    leftContent={<input type="checkbox" checked={book.checked} onChange={() => updateCheck(book.id)} />}
+                    rightContent={<>
+                        {Number(book.price)?.toLocaleString()}원
+                        <div className="input-group">
+                            <label htmlFor="count">수량</label>
+                            <input type="number" name="count" value={book.count} onChange={e => handleUpdate(book.id, e)} />
+                        </div>
+                        <button className="delete-btn" onClick={e => handleDelete(book.id)}><DeleteButton /></button>
+                    </>} />
+                ))}
         </div>
 
         <div className="list-container">

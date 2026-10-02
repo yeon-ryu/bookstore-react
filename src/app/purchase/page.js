@@ -1,6 +1,7 @@
 'use client'
 
 import { purchaseApi } from "@/api/purchaseAPI";
+import BookCard from "@/components/BookCard";
 import Empty from "@/components/Empty";
 import Error from "@/components/Error";
 import Loading from "@/components/Loading";
@@ -8,7 +9,7 @@ import Paging from "@/components/Paging";
 import { useEffect, useRef, useState } from "react"
 
 export default function Purchase() {
-    const [loading, setLoading] = useState(false);
+    const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 
     const [purchaseList, setPurchaseList] = useState([]);
@@ -44,28 +45,19 @@ export default function Purchase() {
         getPurchaseList();
     }, [paging]);
 
-    if(loading) <Loading />
-    if(error) <Error error={error} />
-    if(!purchaseList || purchaseList.length === 0) return <Empty />
+    if(loading) return <Loading />;
+    if(error) return <Error error={error} />;
+    if(!purchaseList || purchaseList.length === 0) return <Empty />;
 
     return <div className="page-container">
         <div className="list-container">
             {purchaseList.map(purchase => (<div key={purchase.id}>
                 {splitOrder(purchase.purchaseId, purchase.purchaseDate)}
-                <div className="book-card">
-                    <div>
-                        <img src={purchase.image} alt={purchase.name} />
-                    </div>
-                    <div className="book-content">
-                        <strong className="book-title">{purchase.name}</strong>
-                        <p className="book-meta"><span>{purchase.writer}</span><span>{purchase.category}</span></p>
-                        <p className="book-desc">{purchase.description}</p>
-                    </div>
-                    <div className="right-content">
+                <BookCard book={purchase} bookId={purchase.bookId}
+                    rightContent={<>
                         {Number(purchase.price)?.toLocaleString()}원<br/>
                         수량 : {purchase.count}개
-                    </div>
-                </div>
+                    </>} />
             </div>))}
             <Paging click={(movePage) => setPaging({...paging, page : movePage})}
                       page={paging.page} perPage={paging.perPage} useNumber={false} />

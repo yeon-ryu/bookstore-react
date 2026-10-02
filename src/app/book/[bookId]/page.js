@@ -10,7 +10,7 @@ import { useEffect, useState } from "react";
 export default function BookDetail() {
     const params = useParams();
 
-    const [loading, setLoading] = useState(false);
+    const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 
     const [book, setBook] = useState({});
@@ -45,8 +45,8 @@ export default function BookDetail() {
         });
     }, [params]);
 
-    if(loading) return <Loading />
-    if(error) return <Error error={error} />
+    if(loading) return <Loading />;
+    if(error) return <Error error={error} />;
 
     return <div className="page-container">
         <div className="img-container">

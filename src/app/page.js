@@ -1,18 +1,18 @@
 'use client'
 
 import { bookApi } from "@/api/bookAPI";
+import BookCard from "@/components/BookCard";
 import Empty from "@/components/Empty";
 import Error from "@/components/Error";
 import Loading from "@/components/Loading";
 import Paging from "@/components/Paging";
-import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { Suspense, useEffect, useState } from "react";
 
 export function Home() {
   const searchParam = useSearchParams();
 
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   
   const [bookList, setBookList] = useState([]);
@@ -67,8 +67,8 @@ export function Home() {
     }
   }, [refresh])
 
-  if(loading) return <Loading />
-  if(error) return <Error error={error} />
+  if(loading) return <Loading />;
+  if(error) return <Error error={error} />;
 
   // 검색 창, 검색 버튼 누르면 getBookList 호출, bookList 출력
   return (
@@ -106,17 +106,9 @@ export function Home() {
 
         {(!bookList || bookList.length === 0) && <Empty />}
 
-        {bookList.map(book => (<Link href={`/book/${book.id}`} className="book-card" key={book.id}>
-          <img src={book.image} alt={book.name} />
-          <div className="book-content">
-            <strong className="book-title">{book.name}</strong>
-            <p className="book-meta"><span>{book.writer}</span><span>{book.category}</span></p>
-            <p className="book-desc">{book.description}</p>
-          </div>
-          <div className="right-content">
-            {Number(book.price)?.toLocaleString()}원
-          </div>
-        </Link>))}
+        {bookList.map(book => (
+          <BookCard key={book.id} book={book} rightContent={<>{Number(book.price)?.toLocaleString()}원</>} />
+        ))}
 
         <Paging click={(movePage) => setPaging({...paging, page : movePage})}
           page={paging.page} perPage={paging.perPage} maxCount={itemMaxCount} useNumber={true} />

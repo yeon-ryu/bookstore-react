@@ -67,7 +67,7 @@ JSON Server : http://localhost:4000
 ```
 src/
 ├─ app/           /, /book/[bookId], /manage, /cart, /purchase
-├─ components/    Layout, Header, Error, Loading, Empty, Paging
+├─ components/    Layout, Header, Error, Loading, Empty, Paging, BookCard
 ├─ api/           bookAPI, purchaseAPI
 └─ stores/        useCartStore
 ```

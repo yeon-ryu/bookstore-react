@@ -93,8 +93,8 @@ export function Manage() {
         });
     }, [searchParam]);
 
-    if(loading) return <Loading />
-    if(error) return <Error error={error} />
+    if(loading) return <Loading />;
+    if(error) return <Error error={error} />;
 
     return <>
         {bookId.current && <div className="list-container"><button className="action-btn right-content error" onClick={removeBook}><DeleteButton /></button></div>}
