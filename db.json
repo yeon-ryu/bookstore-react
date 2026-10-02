@@ -514,6 +514,18 @@
       "category": "그림책",
       "image": "https://image.yes24.com/goods/118499360/XL",
       "id": "WZtu-jnZ3JU"
+    },
+    {
+      "bookId": "9788949105890",
+      "count": 2,
+      "price": 13500,
+      "purchaseDate": "2026-10-02T01:05:53.442Z",
+      "purchaseId": "179090315344286",
+      "name": "올빼미 기사",
+      "writer": "Knight Owl",
+      "category": "그림책",
+      "image": "https://image.yes24.com/goods/118499360/XL",
+      "id": "ofsRQQodkWA"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

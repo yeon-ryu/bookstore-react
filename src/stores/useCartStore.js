@@ -24,7 +24,7 @@ export const useCartStore = create(
 
             updateCheck : (id) => set(state => ({cart : state.cart.map(b => b.bookId === id ? {...b, checked : !b.checked} : b)})),
 
-            deleteBook : (id) => set(state => ({cart : state.cart.filter(b => b.bookId !== id), bookCount : state.bookCount - 1})),
+            deleteBook : (id) => set(state => ({cart : state.cart.filter(b => b.bookId !== id), bookCount : (state.bookCount - 1 >= 0 ? state.bookCount - 1 : 0)})),
 
             resetCart : () => {
                 set({cart : [], bookCount : 0});
