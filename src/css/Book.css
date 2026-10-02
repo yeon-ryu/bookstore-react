@@ -294,6 +294,10 @@
   margin: 0 8px;
   color: #d1d5db;
 }
+
+.book-detail-meta > span:hover {
+  cursor : pointer;
+}
  
 /* 셋째 줄: 가격 */
 .book-detail-price {
