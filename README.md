@@ -72,8 +72,6 @@ src/
 └─ stores/        useCartStore
 ```
 
-&nbsp;
-
 ### 상태 관리
 - Zustand
   - 장바구니(localStorage) : 헤더에서 보이며, 다른 페이지에서 바로 장바구니에 담는 상호작용이 필요하고 새로고침하더라도 유저의 변경사항 유지
@@ -81,6 +79,8 @@ src/
   - 도서 정보(books)
   - 결제 정보(purchase)
 - 그 외의 상태는 각 페이지에서 useState 로 관리
+
+&nbsp;
 
 ## 트러블슈팅
 ### useSearchParam 문제
